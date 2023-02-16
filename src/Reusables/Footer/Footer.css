@@ -1,0 +1,77 @@
+.Jobsly_Footer {
+    background-color: var(--footer-color);
+}
+
+.Jobsly_Footer_Intro_Logo {
+    color: #fff;
+    font-family: 'Gilroy', sans-serif;
+    font-size: var(--text-xl);
+}
+
+.Jobsly_Footer_Intro_Description {
+    color: #fff;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+}
+
+.Jobsly_Links_Header {
+    font-family: 'Gilroy', sans-serif;
+    color: #fff;
+    font-size: var(--text-base);
+}
+
+.Jobsly_Link_Item {
+    color: #fff;
+    font-family: 'Gilroy', sans-serif;
+    font-size: var(--text-sm + 1rem);
+}
+.subscribe_input,
+.subscribe_input_btn {
+    height: 3rem;
+    width: 14rem;
+    border: none;
+    font-family: 'Gilroy', sans-serif;
+    font-size: var(--text-base);
+
+}
+
+.Jobsly_Footer_Subscribe_Container h2 {
+    font-family: 'Gilroy', sans-serif;
+    color: #fff;
+    font-weight: 600;
+}
+
+.Jobsly_Footer_Subscribe_Container p {
+    font-family: 'Gilroy', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    font-size: var(--text-base);
+}
+
+
+
+.subscribe_input_btn {
+    width: 8rem;
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    font-size: var();
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    #form {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,30 @@
+:root{
+  /* COLORS */
+  --secondary-color:#4640de;
+  --secondary-text-background-color:#a8a6d9;
+  --hero-stat-color:#66bdff;
+  --footer-color: #202430;
+  --footer-alt-text-color:#7b808d;
+  --footer-icon-color:#363a45;
+  --hero-text-color: #25324b;
+  --marketing-text-color: #ffb836;
+  --marketing-text-background-color: #fdf3eb;
+  --design-text-color: #60d0b2;
+  --design-text-background-color: #eefaf7;
+  --technology-text-color: #ff7e6f;
+  --technology-text-background-color: #fff0ed;
+  --crypto-text-color: #ececfe;
+/* TYPOGRAPHY */
+
+--text-xs:0.6rem;
+--text-sm:0.8rem;
+--text-base:1rem;
+--text-lg:1.125rem;
+--text-xl:1.25rem;
+--text-xxl:1.5rem;
+--text-xxxl:2rem;
+--text-2xl:2.25rem;
+--text-3xl:2.5rem;
+--text-4xl:4.5rem;
+}
+

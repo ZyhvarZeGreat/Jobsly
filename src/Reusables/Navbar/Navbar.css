@@ -1,0 +1,46 @@
+/* .Jobsly_Navbar{
+    display:flex;
+    flex-direction:row;
+} */
+
+.Jobsly_Navbar_Link_Text {
+    font-size: 1.1rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+}
+
+.Jobsly_Navbar_Action_Links_Text {
+    font-size: 1.1rem;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+}
+
+.Jobsly_Navbar_Action_Links_Secondary {
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: var(--technology-text-background-color);
+}
+.Jobsly_Navbar_Logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--footer-color);
+}
+.Jobsly_Navbar_Details a{
+color: var(--footer-color);
+}
+.Jobsly_Navbar_Action_Links p{
+    color: var(--footer-color);
+}
+
+.nav-btn{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: none;
+}

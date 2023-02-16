@@ -1,0 +1,10 @@
+
+.Jobsly_Home_Categories_Item p {
+    color: var(--footer-alt-text-color);
+}
+
+.Jobsly_Home_Categories_Item:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+    transition: all .5s ease-in-out;
+    }

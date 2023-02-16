@@ -1,0 +1,460 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "Category_Name": "Business",
+        "company": {
+          "data": [
+            {
+              "id": 7,
+              "attributes": {
+                "Company_Description": "Amazon.com is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods, either directly or as the middleman between other retailers and millions of customers.",
+                "createdAt": "2023-02-08T16:36:01.531Z",
+                "updatedAt": "2023-02-08T16:53:51.425Z",
+                "publishedAt": "2023-02-08T16:53:51.421Z",
+                "Employee_Count": 1541000,
+                "Company_Name": "Amazon"
+              }
+            },
+            {
+              "id": 2,
+              "attributes": {
+                "Company_Description": "Google LLC (Google), a subsidiary of Alphabet Inc, is a provider of search and advertising services on the internet. The company focuses on various business areas such as advertising, search, platforms and operating systems, and enterprise and hardware products.",
+                "createdAt": "2023-02-08T15:53:55.034Z",
+                "updatedAt": "2023-02-08T16:53:08.896Z",
+                "publishedAt": "2023-02-08T16:53:08.884Z",
+                "Employee_Count": 85000,
+                "Company_Name": "Google"
+              }
+            },
+            {
+              "id": 3,
+              "attributes": {
+                "Company_Description": "Meta Platforms operates as a social networking company worldwide. The company engages in the development of social media applications for people to connect through mobile devices, personal computers, and other surfaces. It enables users to share opinions, ideas, photos, videos, and other activities online.",
+                "createdAt": "2023-02-08T15:56:04.120Z",
+                "updatedAt": "2023-02-08T16:53:14.197Z",
+                "publishedAt": "2023-02-08T16:53:14.190Z",
+                "Employee_Count": 87314,
+                "Company_Name": "Meta"
+              }
+            },
+            {
+              "id": 1,
+              "attributes": {
+                "Company_Description": "Microsoft is the largest vendor of computer software in the world. It is also a leading provider of cloud computing services, video games, computer and gaming hardware, search and other online services. Microsoft's corporate headquarters is located in Redmond, Wash., and it has offices in more than 60 countries.",
+                "createdAt": "2023-02-08T13:16:11.559Z",
+                "updatedAt": "2023-02-08T17:39:32.486Z",
+                "publishedAt": "2023-02-08T13:32:54.389Z",
+                "Employee_Count": 221000,
+                "Company_Name": "Microsoft "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "Category_Name": "Big Data",
+        "company": {
+          "data": [
+            {
+              "id": 7,
+              "attributes": {
+                "Company_Description": "Amazon.com is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods, either directly or as the middleman between other retailers and millions of customers.",
+                "createdAt": "2023-02-08T16:36:01.531Z",
+                "updatedAt": "2023-02-08T16:53:51.425Z",
+                "publishedAt": "2023-02-08T16:53:51.421Z",
+                "Employee_Count": 1541000,
+                "Company_Name": "Amazon"
+              }
+            },
+            {
+              "id": 2,
+              "attributes": {
+                "Company_Description": "Google LLC (Google), a subsidiary of Alphabet Inc, is a provider of search and advertising services on the internet. The company focuses on various business areas such as advertising, search, platforms and operating systems, and enterprise and hardware products.",
+                "createdAt": "2023-02-08T15:53:55.034Z",
+                "updatedAt": "2023-02-08T16:53:08.896Z",
+                "publishedAt": "2023-02-08T16:53:08.884Z",
+                "Employee_Count": 85000,
+                "Company_Name": "Google"
+              }
+            },
+            {
+              "id": 3,
+              "attributes": {
+                "Company_Description": "Meta Platforms operates as a social networking company worldwide. The company engages in the development of social media applications for people to connect through mobile devices, personal computers, and other surfaces. It enables users to share opinions, ideas, photos, videos, and other activities online.",
+                "createdAt": "2023-02-08T15:56:04.120Z",
+                "updatedAt": "2023-02-08T16:53:14.197Z",
+                "publishedAt": "2023-02-08T16:53:14.190Z",
+                "Employee_Count": 87314,
+                "Company_Name": "Meta"
+              }
+            },
+            {
+              "id": 1,
+              "attributes": {
+                "Company_Description": "Microsoft is the largest vendor of computer software in the world. It is also a leading provider of cloud computing services, video games, computer and gaming hardware, search and other online services. Microsoft's corporate headquarters is located in Redmond, Wash., and it has offices in more than 60 countries.",
+                "createdAt": "2023-02-08T13:16:11.559Z",
+                "updatedAt": "2023-02-08T17:39:32.486Z",
+                "publishedAt": "2023-02-08T13:32:54.389Z",
+                "Employee_Count": 221000,
+                "Company_Name": "Microsoft "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "Category_Name": "AI/ML",
+        "company": {
+          "data": [
+            {
+              "id": 11,
+              "attributes": {
+                "Company_Description": " Nomad is an intuitive cloud-based content and asset management platform powered by AWS and AI technology that transforms the way you manage your ever-growing content libraries. Our powerful AI-driven platform helps you manage, enrich, discover, and distribute your content like never before.",
+                "createdAt": "2023-02-08T16:48:29.648Z",
+                "updatedAt": "2023-02-08T16:54:59.571Z",
+                "publishedAt": "2023-02-08T16:48:32.680Z",
+                "Employee_Count": 320,
+                "Company_Name": "Nomad"
+              }
+            },
+            {
+              "id": 1,
+              "attributes": {
+                "Company_Description": "Microsoft is the largest vendor of computer software in the world. It is also a leading provider of cloud computing services, video games, computer and gaming hardware, search and other online services. Microsoft's corporate headquarters is located in Redmond, Wash., and it has offices in more than 60 countries.",
+                "createdAt": "2023-02-08T13:16:11.559Z",
+                "updatedAt": "2023-02-08T17:39:32.486Z",
+                "publishedAt": "2023-02-08T13:32:54.389Z",
+                "Employee_Count": 221000,
+                "Company_Name": "Microsoft "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "attributes": { "Category_Name": "Web3", "company": { "data": [] } }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "Category_Name": "Design",
+        "company": {
+          "data": [
+            {
+              "id": 4,
+              "attributes": {
+                "Company_Description": "ADOBE Inc (Adobe) provides digital marketing, multimedia and creativity software products. Its products and services are used by creative professionals, knowledge workers, students, marketers, application developers, consumers and enterprises to create, manage, deliver, measure, optimize, engage and transact with compelling content and experiences spanning devices, personal computers, and media. The company markets its products and services to enterprise customers through own sales force and local field offices. It distributes products through distributors, systems integrators, independent software vendors, value-added resellers, software developers, retailers, and original equipment manufacturers (OEMs). Its business operations are spread across the Americas, Europe, the Middle East and Africa, and Asia-Pacific. Adobe is headquartered in San Jose, California",
+                "createdAt": "2023-02-08T16:24:56.039Z",
+                "updatedAt": "2023-02-08T16:53:35.935Z",
+                "publishedAt": "2023-02-08T16:53:35.926Z",
+                "Employee_Count": 25988,
+                "Company_Name": "Adobe"
+              }
+            },
+            {
+              "id": 8,
+              "attributes": {
+                "Company_Description": "Figma is a cloud-based design tool that is similar to Sketch in functionality and features, but with big differences that make Figma better for team collaboration.",
+                "createdAt": "2023-02-08T16:42:17.910Z",
+                "updatedAt": "2023-02-08T16:53:58.063Z",
+                "publishedAt": "2023-02-08T16:53:58.051Z",
+                "Employee_Count": 250,
+                "Company_Name": "Figma"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 6,
+      "attributes": { "Category_Name": "Fintech", "company": { "data": [] } }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "Category_Name": "Cloud",
+        "company": {
+          "data": [
+            {
+              "id": 2,
+              "attributes": {
+                "Company_Description": "Google LLC (Google), a subsidiary of Alphabet Inc, is a provider of search and advertising services on the internet. The company focuses on various business areas such as advertising, search, platforms and operating systems, and enterprise and hardware products.",
+                "createdAt": "2023-02-08T15:53:55.034Z",
+                "updatedAt": "2023-02-08T16:53:08.896Z",
+                "publishedAt": "2023-02-08T16:53:08.884Z",
+                "Employee_Count": 85000,
+                "Company_Name": "Google"
+              }
+            },
+            {
+              "id": 7,
+              "attributes": {
+                "Company_Description": "Amazon.com is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods, either directly or as the middleman between other retailers and millions of customers.",
+                "createdAt": "2023-02-08T16:36:01.531Z",
+                "updatedAt": "2023-02-08T16:53:51.425Z",
+                "publishedAt": "2023-02-08T16:53:51.421Z",
+                "Employee_Count": 1541000,
+                "Company_Name": "Amazon"
+              }
+            },
+            {
+              "id": 1,
+              "attributes": {
+                "Company_Description": "Microsoft is the largest vendor of computer software in the world. It is also a leading provider of cloud computing services, video games, computer and gaming hardware, search and other online services. Microsoft's corporate headquarters is located in Redmond, Wash., and it has offices in more than 60 countries.",
+                "createdAt": "2023-02-08T13:16:11.559Z",
+                "updatedAt": "2023-02-08T17:39:32.486Z",
+                "publishedAt": "2023-02-08T13:32:54.389Z",
+                "Employee_Count": 221000,
+                "Company_Name": "Microsoft "
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 8,
+      "attributes": {
+        "Category_Name": "Consumer Tech",
+        "company": {
+          "data": [
+            {
+              "id": 6,
+              "attributes": {
+                "Company_Description": "Intel Corporation designs, manufactures, and sells computer components and related products. The Company major products include microprocessors, chipsets, embedded processors and microcontrollers, flash memory, graphic, network and communication, systems management software, conferencing, and digital imaging products.",
+                "createdAt": "2023-02-08T16:29:01.036Z",
+                "updatedAt": "2023-02-08T16:53:46.201Z",
+                "publishedAt": "2023-02-08T16:53:46.197Z",
+                "Employee_Count": 131900,
+                "Company_Name": "Intel"
+              }
+            },
+            {
+              "id": 7,
+              "attributes": {
+                "Company_Description": "Amazon.com is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods, either directly or as the middleman between other retailers and millions of customers.",
+                "createdAt": "2023-02-08T16:36:01.531Z",
+                "updatedAt": "2023-02-08T16:53:51.425Z",
+                "publishedAt": "2023-02-08T16:53:51.421Z",
+                "Employee_Count": 1541000,
+                "Company_Name": "Amazon"
+              }
+            },
+            {
+              "id": 12,
+              "attributes": {
+                "Company_Description": "Advanced Micro Devices, Inc. (AMD), global company that specializes in manufacturing semiconductor devices used in computer processing. The company also produces flash memories, graphics processors, motherboard chip sets, and a variety of components used in consumer electronics goods.",
+                "createdAt": "2023-02-08T16:49:50.452Z",
+                "updatedAt": "2023-02-08T16:49:53.888Z",
+                "publishedAt": "2023-02-08T16:49:53.875Z",
+                "Employee_Count": 15500,
+                "Company_Name": "AMD"
+              }
+            },
+            {
+              "id": 5,
+              "attributes": {
+                "Company_Description": "Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies on an internet-connected device. Depending on your plan, you can also download TV shows and movies to your iOS, Android, or Windows 10 device and watch without an internet connection.",
+                "createdAt": "2023-02-08T16:26:37.218Z",
+                "updatedAt": "2023-02-08T16:53:40.795Z",
+                "publishedAt": "2023-02-08T16:53:40.785Z",
+                "Employee_Count": 12800,
+                "Company_Name": "Netflix"
+              }
+            },
+            {
+              "id": 14,
+              "attributes": {
+                "Company_Description": "Uber Technologies Inc (Uber) is a provider of ride-hailing services. It offers services through its technology platforms such as mobile applications and websites. Uber connects riders with drivers or independent ride solution providers. The company offers to pick up and drop services at airports across continents.",
+                "createdAt": "2023-02-08T16:52:52.553Z",
+                "updatedAt": "2023-02-08T16:54:11.279Z",
+                "publishedAt": "2023-02-08T16:54:11.274Z",
+                "Employee_Count": 29300,
+                "Company_Name": "Uber"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 9,
+      "attributes": {
+        "Category_Name": "Gaming",
+        "company": {
+          "data": [
+            {
+              "id": 6,
+              "attributes": {
+                "Company_Description": "Intel Corporation designs, manufactures, and sells computer components and related products. The Company major products include microprocessors, chipsets, embedded processors and microcontrollers, flash memory, graphic, network and communication, systems management software, conferencing, and digital imaging products.",
+                "createdAt": "2023-02-08T16:29:01.036Z",
+                "updatedAt": "2023-02-08T16:53:46.201Z",
+                "publishedAt": "2023-02-08T16:53:46.197Z",
+                "Employee_Count": 131900,
+                "Company_Name": "Intel"
+              }
+            },
+            {
+              "id": 12,
+              "attributes": {
+                "Company_Description": "Advanced Micro Devices, Inc. (AMD), global company that specializes in manufacturing semiconductor devices used in computer processing. The company also produces flash memories, graphics processors, motherboard chip sets, and a variety of components used in consumer electronics goods.",
+                "createdAt": "2023-02-08T16:49:50.452Z",
+                "updatedAt": "2023-02-08T16:49:53.888Z",
+                "publishedAt": "2023-02-08T16:49:53.875Z",
+                "Employee_Count": 15500,
+                "Company_Name": "AMD"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 10,
+      "attributes": {
+        "Category_Name": "Healthcare ",
+        "company": { "data": [] }
+      }
+    },
+    {
+      "id": 11,
+      "attributes": {
+        "Category_Name": "Hosting",
+        "company": {
+          "data": [
+            {
+              "id": 9,
+              "attributes": {
+                "Company_Description": "Hostinger International, Ltd is an employee-owned web hosting provider and an ICANN-accredited domain registrar. Established in 2004, the company is headquartered in Lithuania and employs more than 1,000 people. Hostinger is the parent company of 000webhost, Hosting24, Zyro, and Niagahoster.",
+                "createdAt": "2023-02-08T16:43:24.029Z",
+                "updatedAt": "2023-02-08T16:54:04.326Z",
+                "publishedAt": "2023-02-08T16:54:04.308Z",
+                "Employee_Count": 1000,
+                "Company_Name": "Hostinger"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 12,
+      "attributes": {
+        "Category_Name": "Advertising",
+        "company": {
+          "data": [
+            {
+              "id": 2,
+              "attributes": {
+                "Company_Description": "Google LLC (Google), a subsidiary of Alphabet Inc, is a provider of search and advertising services on the internet. The company focuses on various business areas such as advertising, search, platforms and operating systems, and enterprise and hardware products.",
+                "createdAt": "2023-02-08T15:53:55.034Z",
+                "updatedAt": "2023-02-08T16:53:08.896Z",
+                "publishedAt": "2023-02-08T16:53:08.884Z",
+                "Employee_Count": 85000,
+                "Company_Name": "Google"
+              }
+            },
+            {
+              "id": 3,
+              "attributes": {
+                "Company_Description": "Meta Platforms operates as a social networking company worldwide. The company engages in the development of social media applications for people to connect through mobile devices, personal computers, and other surfaces. It enables users to share opinions, ideas, photos, videos, and other activities online.",
+                "createdAt": "2023-02-08T15:56:04.120Z",
+                "updatedAt": "2023-02-08T16:53:14.197Z",
+                "publishedAt": "2023-02-08T16:53:14.190Z",
+                "Employee_Count": 87314,
+                "Company_Name": "Meta"
+              }
+            },
+            {
+              "id": 5,
+              "attributes": {
+                "Company_Description": "Netflix is a subscription-based streaming service that allows our members to watch TV shows and movies on an internet-connected device. Depending on your plan, you can also download TV shows and movies to your iOS, Android, or Windows 10 device and watch without an internet connection.",
+                "createdAt": "2023-02-08T16:26:37.218Z",
+                "updatedAt": "2023-02-08T16:53:40.795Z",
+                "publishedAt": "2023-02-08T16:53:40.785Z",
+                "Employee_Count": 12800,
+                "Company_Name": "Netflix"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 13,
+      "attributes": { "Category_Name": "Education", "company": { "data": [] } }
+    },
+    {
+      "id": 14,
+      "attributes": { "Category_Name": "Legal", "company": { "data": [] } }
+    },
+    {
+      "id": 16,
+      "attributes": {
+        "Category_Name": "Media",
+        "company": {
+          "data": [
+            {
+              "id": 3,
+              "attributes": {
+                "Company_Description": "Meta Platforms operates as a social networking company worldwide. The company engages in the development of social media applications for people to connect through mobile devices, personal computers, and other surfaces. It enables users to share opinions, ideas, photos, videos, and other activities online.",
+                "createdAt": "2023-02-08T15:56:04.120Z",
+                "updatedAt": "2023-02-08T16:53:14.197Z",
+                "publishedAt": "2023-02-08T16:53:14.190Z",
+                "Employee_Count": 87314,
+                "Company_Name": "Meta"
+              }
+            },
+            {
+              "id": 10,
+              "attributes": {
+                "Company_Description": "LinkedIn is a business and employment-focused social media platform that works through websites and mobile apps. Launched on May 5, 2003, owned by Microsoft. The platform is primarily used for professional networking and career development, and allows job seekers to post their CVs and employers to post jobs",
+                "createdAt": "2023-02-08T16:45:28.180Z",
+                "updatedAt": "2023-02-08T16:45:33.883Z",
+                "publishedAt": "2023-02-08T16:45:33.874Z",
+                "Employee_Count": 21000,
+                "Company_Name": "LinkedIn"
+              }
+            },
+            {
+              "id": 2,
+              "attributes": {
+                "Company_Description": "Google LLC (Google), a subsidiary of Alphabet Inc, is a provider of search and advertising services on the internet. The company focuses on various business areas such as advertising, search, platforms and operating systems, and enterprise and hardware products.",
+                "createdAt": "2023-02-08T15:53:55.034Z",
+                "updatedAt": "2023-02-08T16:53:08.896Z",
+                "publishedAt": "2023-02-08T16:53:08.884Z",
+                "Employee_Count": 85000,
+                "Company_Name": "Google"
+              }
+            },
+            {
+              "id": 13,
+              "attributes": {
+                "Company_Description": "Discord is a medium technology company with an annual revenue of $5.3M that is headquartered in San Francisco, CA. To create space to find belonging in their lives. We want to make it easier for you to talk regularly with the people you care about.",
+                "createdAt": "2023-02-08T16:51:35.331Z",
+                "updatedAt": "2023-02-08T16:51:39.311Z",
+                "publishedAt": "2023-02-08T16:51:39.296Z",
+                "Employee_Count": 750,
+                "Company_Name": "Discord"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 15 }
+  }
+}

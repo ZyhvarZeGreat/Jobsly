@@ -1,0 +1,27 @@
+.Latest_Full-Time{
+    background-color:  var(--design-text-background-color);
+    color: var(--design-text-color);
+}
+
+.Latest_Contract{
+    background-color:  var(--technology-text-background-color);
+    color: var(--technology-text-color);
+}
+.Latest_Business{
+    border: 1px solid  var(--secondary-color);
+    color: var(--secondary-color);
+}
+.Latest_Cloud{
+    border: 1px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+.Latest_Media{
+    border: 1px solid  var(--design-text-background-color);
+    color: var(--design-text-color);
+}
+
+.Latest_Fintech{
+    border: 1px solid  var(--design-text-background-color);
+    color: var(--design-text-color);
+}

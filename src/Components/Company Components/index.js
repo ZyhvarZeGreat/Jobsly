@@ -1,0 +1,1 @@
+export {default as Recommended_Companies} from '../Company Components/Recommended_Companies'

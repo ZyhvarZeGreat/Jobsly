@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Job_Title": {
+      "type": "string"
+    },
+    "Job_Description": {
+      "type": "text"
+    },
+    "Salary": {
+      "type": "integer",
+      "default": 100
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "jobs"
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::company.company",
+      "inversedBy": "jobs"
+    },
+    "employments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employment.employment",
+      "mappedBy": "jobs"
+    },
+    "levels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::level.level",
+      "mappedBy": "jobs"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "mappedBy": "jobs"
+    },
+    "capacity": {
+      "type": "enumeration",
+      "enum": [
+        "capacity"
+      ]
+    }
+  }
+}

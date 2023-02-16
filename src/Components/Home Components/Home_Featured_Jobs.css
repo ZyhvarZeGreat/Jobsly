@@ -1,0 +1,42 @@
+.Business {
+    background-color: var(--secondary-text-background-color);
+    color: var(--secondary-color);
+}
+.Data {
+    background-color: var(--secondary-text-background-color);
+    color: var(--secondary-color)
+}
+
+.Tech {
+    background-color: var(--technology-text-background-color);
+    color: var(--technology-text-color)
+}
+.Cloud {
+    background-color: var(--design-text-background-color);
+    color: var(--design-text-color)
+}
+.Design {
+    background-color: var(--design-text-background-color);
+    color: var(--design-text-color)
+}
+
+.Advertising {
+    background-color: var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+
+.Jobsly_Featured_Jobs_Container{
+cursor: pointer;
+}
+
+.card_img_container{
+    height: 2.7rem;
+    width: 6rem;
+
+    object-fit: contain;
+}
+.card_img{
+    height: 100%;
+    max-width: 100%;
+}

@@ -1,0 +1,454 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "Job_Title": "Data Analyst",
+        "createdAt": "2023-01-22T14:58:01.896Z",
+        "updatedAt": "2023-02-08T20:06:17.415Z",
+        "publishedAt": "2023-02-08T20:06:17.413Z",
+        "Job_Description": "\n    Strong mathematical skills to help collect, measure, organize and analyze data \n    Knowledge of programming languages like SQL, Oracle, R, MATLAB, and Python\n    Technical proficiency regarding database design development, data models, techniques for data mining, and segmentation.\n    Experience in handling reporting packages like Business Objects, programming (Javascript, XML, or ETL frameworks), databases\n    Proficiency in statistics and statistical packages like Excel, SPSS, SAS to be used for data set analyzing\n    Adept at using data processing platforms like Hadoop and Apache Spark\n    Knowledge of data visualization software like Tableau, Qlik\n    Knowledge of how to create and apply the most accurate algorithms to datasets in order to find solutions \n    Problem-solving skills\n    Accuracy and attention to detail\n    Adept at queries, writing reports, and making presentations\n    Team-working skills\n    Verbal and Written communication skills\n    Proven working experience in data analysis\n",
+        "Salary": null,
+        "category": {
+          "data": [
+            {
+              "id": 3,
+              "attributes": {
+                "Category_Name": "AI/ML",
+                "createdAt": "2023-02-08T15:19:53.534Z",
+                "updatedAt": "2023-02-08T18:34:17.342Z",
+                "publishedAt": "2023-02-08T15:23:56.786Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "Job_Title": "Software Engineer",
+        "createdAt": "2023-02-08T19:47:44.055Z",
+        "updatedAt": "2023-02-09T18:56:05.687Z",
+        "publishedAt": "2023-02-08T20:06:40.869Z",
+        "Job_Description": "Oga Write code",
+        "Salary": 120000,
+        "category": {
+          "data": [
+            {
+              "id": 12,
+              "attributes": {
+                "Category_Name": "Advertising",
+                "createdAt": "2023-02-08T15:22:11.850Z",
+                "updatedAt": "2023-02-08T17:53:54.797Z",
+                "publishedAt": "2023-02-08T15:23:50.753Z"
+              }
+            },
+            {
+              "id": 3,
+              "attributes": {
+                "Category_Name": "AI/ML",
+                "createdAt": "2023-02-08T15:19:53.534Z",
+                "updatedAt": "2023-02-08T18:34:17.342Z",
+                "publishedAt": "2023-02-08T15:23:56.786Z"
+              }
+            },
+            {
+              "id": 9,
+              "attributes": {
+                "Category_Name": "Gaming",
+                "createdAt": "2023-02-08T15:21:25.990Z",
+                "updatedAt": "2023-02-08T17:53:11.274Z",
+                "publishedAt": "2023-02-08T15:24:09.279Z"
+              }
+            },
+            {
+              "id": 16,
+              "attributes": {
+                "Category_Name": "Media",
+                "createdAt": "2023-02-08T15:57:13.557Z",
+                "updatedAt": "2023-02-08T17:54:27.432Z",
+                "publishedAt": "2023-02-08T15:58:09.333Z"
+              }
+            },
+            {
+              "id": 4,
+              "attributes": {
+                "Category_Name": "Web3",
+                "createdAt": "2023-02-08T15:20:19.500Z",
+                "updatedAt": "2023-02-08T15:24:34.268Z",
+                "publishedAt": "2023-02-08T15:24:34.266Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "Job_Title": "UI/UX Designer",
+        "createdAt": "2023-02-08T19:48:27.618Z",
+        "updatedAt": "2023-02-09T18:56:48.776Z",
+        "publishedAt": "2023-02-08T20:06:45.699Z",
+        "Job_Description": "Design UI",
+        "Salary": 80000,
+        "category": {
+          "data": [
+            {
+              "id": 5,
+              "attributes": {
+                "Category_Name": "Design",
+                "createdAt": "2023-02-08T15:20:28.199Z",
+                "updatedAt": "2023-02-08T17:52:01.565Z",
+                "publishedAt": "2023-02-08T15:23:43.502Z"
+              }
+            },
+            {
+              "id": 13,
+              "attributes": {
+                "Category_Name": "Education",
+                "createdAt": "2023-02-08T15:22:59.702Z",
+                "updatedAt": "2023-02-08T15:24:01.875Z",
+                "publishedAt": "2023-02-08T15:24:01.873Z"
+              }
+            },
+            {
+              "id": 9,
+              "attributes": {
+                "Category_Name": "Gaming",
+                "createdAt": "2023-02-08T15:21:25.990Z",
+                "updatedAt": "2023-02-08T17:53:11.274Z",
+                "publishedAt": "2023-02-08T15:24:09.279Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "attributes": {
+        "Job_Title": "AI/ML Engineer",
+        "createdAt": "2023-02-08T19:49:24.362Z",
+        "updatedAt": "2023-02-13T20:01:50.650Z",
+        "publishedAt": "2023-02-08T20:06:12.950Z",
+        "Job_Description": "AI/ML Shii",
+        "Salary": 153212,
+        "category": {
+          "data": [
+            {
+              "id": 3,
+              "attributes": {
+                "Category_Name": "AI/ML",
+                "createdAt": "2023-02-08T15:19:53.534Z",
+                "updatedAt": "2023-02-08T18:34:17.342Z",
+                "publishedAt": "2023-02-08T15:23:56.786Z"
+              }
+            },
+            {
+              "id": 2,
+              "attributes": {
+                "Category_Name": "Big Data",
+                "createdAt": "2023-02-08T15:19:35.309Z",
+                "updatedAt": "2023-02-08T17:51:20.729Z",
+                "publishedAt": "2023-02-08T15:19:37.421Z"
+              }
+            },
+            {
+              "id": 1,
+              "attributes": {
+                "Category_Name": "Business",
+                "createdAt": "2023-02-08T15:19:22.813Z",
+                "updatedAt": "2023-02-08T17:50:57.089Z",
+                "publishedAt": "2023-02-08T15:19:25.166Z"
+              }
+            },
+            {
+              "id": 7,
+              "attributes": {
+                "Category_Name": "Cloud",
+                "createdAt": "2023-02-08T15:20:56.949Z",
+                "updatedAt": "2023-02-08T17:52:28.232Z",
+                "publishedAt": "2023-02-08T15:23:33.698Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 5,
+      "attributes": {
+        "Job_Title": "Marketing Specialist",
+        "createdAt": "2023-02-08T19:50:46.073Z",
+        "updatedAt": "2023-02-09T18:51:36.167Z",
+        "publishedAt": "2023-02-08T20:06:30.376Z",
+        "Job_Description": "Market shit for me",
+        "Salary": 78000,
+        "category": {
+          "data": [
+            {
+              "id": 12,
+              "attributes": {
+                "Category_Name": "Advertising",
+                "createdAt": "2023-02-08T15:22:11.850Z",
+                "updatedAt": "2023-02-08T17:53:54.797Z",
+                "publishedAt": "2023-02-08T15:23:50.753Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 6,
+      "attributes": {
+        "Job_Title": "Product Designer",
+        "createdAt": "2023-02-08T19:52:06.276Z",
+        "updatedAt": "2023-02-09T18:52:38.514Z",
+        "publishedAt": "2023-02-08T20:06:35.418Z",
+        "Job_Description": "Design Products ,duh...",
+        "Salary": 90000,
+        "category": {
+          "data": [
+            {
+              "id": 5,
+              "attributes": {
+                "Category_Name": "Design",
+                "createdAt": "2023-02-08T15:20:28.199Z",
+                "updatedAt": "2023-02-08T17:52:01.565Z",
+                "publishedAt": "2023-02-08T15:23:43.502Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "Job_Title": "Lead Engineer (Backend)",
+        "createdAt": "2023-02-08T19:54:29.836Z",
+        "updatedAt": "2023-02-09T17:43:52.477Z",
+        "publishedAt": "2023-02-08T20:06:25.659Z",
+        "Job_Description": "Lead shit for me",
+        "Salary": 200000,
+        "category": { "data": [] }
+      }
+    },
+    {
+      "id": 8,
+      "attributes": {
+        "Job_Title": "Customer Service",
+        "createdAt": "2023-02-08T20:05:14.716Z",
+        "updatedAt": "2023-02-09T18:47:46.327Z",
+        "publishedAt": "2023-02-08T20:05:17.171Z",
+        "Job_Description": "talk to customers",
+        "Salary": 23000,
+        "category": {
+          "data": [
+            {
+              "id": 12,
+              "attributes": {
+                "Category_Name": "Advertising",
+                "createdAt": "2023-02-08T15:22:11.850Z",
+                "updatedAt": "2023-02-08T17:53:54.797Z",
+                "publishedAt": "2023-02-08T15:23:50.753Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 9,
+      "attributes": {
+        "Job_Title": "Information Architect",
+        "createdAt": "2023-02-09T17:46:27.906Z",
+        "updatedAt": "2023-02-09T18:48:39.089Z",
+        "publishedAt": "2023-02-09T17:49:36.957Z",
+        "Job_Description": "Information architects do their work where content meets product strategy.\nTasks: Information architect’s main jobs are to create site maps and user flows, define data flows/delivery, and research concept and usability testing.\nSkills: web analytics, organize information, translate user behavior into site structures, Git + GitHub",
+        "Salary": 100000,
+        "category": { "data": [] }
+      }
+    },
+    {
+      "id": 10,
+      "attributes": {
+        "Job_Title": "Mobile Developer",
+        "createdAt": "2023-02-09T17:47:42.634Z",
+        "updatedAt": "2023-02-09T18:52:24.748Z",
+        "publishedAt": "2023-02-09T17:49:42.114Z",
+        "Job_Description": "Have you ever wondered how websites are turned into apps? That’s the secret super power of mobile developers!\n\nTasks: You’ll work as a mobile developer to optimize code for mobile, take designs from prototype to code, and test and analyze code for mobile.\n\nSkills: Git + GitHub, iOS, Android, other languages like Ruby, Objective-C, or Java",
+        "Salary": 102000,
+        "category": {
+          "data": [
+            {
+              "id": 8,
+              "attributes": {
+                "Category_Name": "Consumer Tech",
+                "createdAt": "2023-02-08T15:21:06.667Z",
+                "updatedAt": "2023-02-08T17:52:53.511Z",
+                "publishedAt": "2023-02-08T15:23:38.524Z"
+              }
+            },
+            {
+              "id": 6,
+              "attributes": {
+                "Category_Name": "Fintech",
+                "createdAt": "2023-02-08T15:20:49.078Z",
+                "updatedAt": "2023-02-08T15:20:51.065Z",
+                "publishedAt": "2023-02-08T15:20:51.063Z"
+              }
+            },
+            {
+              "id": 10,
+              "attributes": {
+                "Category_Name": "Healthcare ",
+                "createdAt": "2023-02-08T15:21:39.655Z",
+                "updatedAt": "2023-02-08T15:24:21.196Z",
+                "publishedAt": "2023-02-08T15:24:21.195Z"
+              }
+            },
+            {
+              "id": 12,
+              "attributes": {
+                "Category_Name": "Advertising",
+                "createdAt": "2023-02-08T15:22:11.850Z",
+                "updatedAt": "2023-02-08T17:53:54.797Z",
+                "publishedAt": "2023-02-08T15:23:50.753Z"
+              }
+            },
+            {
+              "id": 16,
+              "attributes": {
+                "Category_Name": "Media",
+                "createdAt": "2023-02-08T15:57:13.557Z",
+                "updatedAt": "2023-02-08T17:54:27.432Z",
+                "publishedAt": "2023-02-08T15:58:09.333Z"
+              }
+            },
+            {
+              "id": 4,
+              "attributes": {
+                "Category_Name": "Web3",
+                "createdAt": "2023-02-08T15:20:19.500Z",
+                "updatedAt": "2023-02-08T15:24:34.268Z",
+                "publishedAt": "2023-02-08T15:24:34.266Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 11,
+      "attributes": {
+        "Job_Title": "Full-Stack Developer",
+        "createdAt": "2023-02-09T17:48:35.334Z",
+        "updatedAt": "2023-02-09T17:48:53.532Z",
+        "publishedAt": "2023-02-09T17:48:53.525Z",
+        "Job_Description": "Have you ever heard the term “the whole enchilada?” Full-stack developers can see projects through from start (prototyping, planning) to middle (designing, building) to finish (deploying, managing).\n\nTasks: Covering the full-stack as a developer means building and managing platforms and working across teams to create projects, code projects, and manage databases.\n\nSkills: Anything!! Git + GitHub, HTML, CSS, SASS, JavaScript, Java, MySQL, Ruby, Python, Responsive Web Design, jQuery, frameworks, PHP, Apache",
+        "Salary": 107000,
+        "category": {
+          "data": [
+            {
+              "id": 6,
+              "attributes": {
+                "Category_Name": "Fintech",
+                "createdAt": "2023-02-08T15:20:49.078Z",
+                "updatedAt": "2023-02-08T15:20:51.065Z",
+                "publishedAt": "2023-02-08T15:20:51.063Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 12,
+      "attributes": {
+        "Job_Title": "Big Data Architect",
+        "createdAt": "2023-02-09T17:51:26.405Z",
+        "updatedAt": "2023-02-09T18:47:37.843Z",
+        "publishedAt": "2023-02-09T17:51:33.917Z",
+        "Job_Description": "build and maintain data infrastructure to extract and organize data for authorized individuals to access. Data architects/engineers work with database administrators and analysts to secure easy access to the company's big data.",
+        "Salary": 109000,
+        "category": {
+          "data": [
+            {
+              "id": 3,
+              "attributes": {
+                "Category_Name": "AI/ML",
+                "createdAt": "2023-02-08T15:19:53.534Z",
+                "updatedAt": "2023-02-08T18:34:17.342Z",
+                "publishedAt": "2023-02-08T15:23:56.786Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 13,
+      "attributes": {
+        "Job_Title": "DevOps Engineer",
+        "createdAt": "2023-02-09T17:52:58.456Z",
+        "updatedAt": "2023-02-09T18:48:10.035Z",
+        "publishedAt": "2023-02-09T17:53:48.186Z",
+        "Job_Description": "    Facilitating the development process and operations.\n    Identifying setbacks and shortcomings.\n    Creating suitable DevOps channels across the organization.\n    Establishing continuous build environments to speed up software development.\n    Designing efficient practices.",
+        "Salary": 120000,
+        "category": {
+          "data": [
+            {
+              "id": 12,
+              "attributes": {
+                "Category_Name": "Advertising",
+                "createdAt": "2023-02-08T15:22:11.850Z",
+                "updatedAt": "2023-02-08T17:53:54.797Z",
+                "publishedAt": "2023-02-08T15:23:50.753Z"
+              }
+            },
+            {
+              "id": 3,
+              "attributes": {
+                "Category_Name": "AI/ML",
+                "createdAt": "2023-02-08T15:19:53.534Z",
+                "updatedAt": "2023-02-08T18:34:17.342Z",
+                "publishedAt": "2023-02-08T15:23:56.786Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 14,
+      "attributes": {
+        "Job_Title": "QA Engineer",
+        "createdAt": "2023-02-09T17:55:37.286Z",
+        "updatedAt": "2023-02-09T18:55:23.332Z",
+        "publishedAt": "2023-02-09T17:55:38.642Z",
+        "Job_Description": "    Test current products and identifying deficiencies\n    Suggest solutions to identified product problems \n    Investigate product quality in order to make improvements to achieve better customer satisfaction\n    Plan, create and manage the overall Quality Planning strategy\n    Collaborate with the Product Development team to ensure consistent project execution\n    Identify quality assurance process bottleneck and suggest actions for improvement \n    Oversee continuous improvement projects \n    Collect quality data \n    Identify key KPIs for product quality\n    Prepare and present reports and metrics      to Senior Management",
+        "Salary": 98000,
+        "category": {
+          "data": [
+            {
+              "id": 6,
+              "attributes": {
+                "Category_Name": "Fintech",
+                "createdAt": "2023-02-08T15:20:49.078Z",
+                "updatedAt": "2023-02-08T15:20:51.065Z",
+                "publishedAt": "2023-02-08T15:20:51.063Z"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 14 }
+  }
+}

@@ -1,0 +1,100 @@
+.Jobsly_Hero_Search_Form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    justify-content: space-around;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.04);
+}
+
+.Jobsly_Hero_Search_Form {
+    width: 100%;
+    height: 5rem;
+}
+
+.Jobsly_Hero_Search_Form_Search_Keyword {
+    height: 90%;
+}
+
+.Jobsly_Hero_Search_Input {
+    height: 3rem;
+    width: 16rem;
+    border: none;
+    font-family: 'Gilroy', sans-serif;
+    font-size: var(--text-sm);
+    border-bottom: 1px solid #e5e5e5;
+    font-size: calc(var(--text-base) - .1rem)
+}
+
+
+.Jobsly_Hero_Search_Form_Location_Select {
+    height: 3rem;
+    width: 16rem;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: 'Gilroy', sans-serif;
+    background-color: #fff;
+    font-size: calc(var(--text-base) - .1rem)
+}
+
+.Jobsly_Hero_Search_Form_Button {
+    background-color: var(--secondary-color);
+    height: 3rem;
+    width: 12rem;
+    font-weight: 600;
+    font-family: 'Gilroy', sans-serif;
+    display: flex;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    font-size: var(--text-lg);
+    color: #fff;
+}
+
+.Jobsly_Hero_Search_Form_Button:hover {
+    box-shadow: 1px 5px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: translateX(3);
+    transition: all ease-in 300ms;
+}
+
+@media screen and (max-width:768px) {
+    .Jobsly_Hero_Search_Form {
+        flex-direction: column;
+        width: 100%;
+        height: 12rem;
+    }
+
+    .Jobsly_Hero_Search_Form_Search_Keyword,
+    .Jobsly_Hero_Search_Form_Location {
+        width: 100%;
+    }
+
+    .Jobsly_Hero_Search_Input,
+    .Jobsly_Hero_Search_Form_Location_Select {
+        height: 3rem;
+        width: 100%;
+    }
+
+    .Jobsly_Hero_Search_Form_Button {
+        height: 3.5rem;
+        width: 22rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .Jobsly_Hero_Search_Input {
+        width: 18rem;
+    }
+
+    .Jobsly_Hero_Search_Form_Location_Select {
+        width: 18rem;
+    }
+
+    .Jobsly_Hero_Search_Form_Button {
+        width: 18rem;
+    }
+}
