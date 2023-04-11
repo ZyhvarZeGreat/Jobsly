@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { UilArrowRight } from '@iconscout/react-unicons'
 import fetchJobs from '../../Services/fetchJobs'
 import { useQuery } from '@tanstack/react-query'
-
+import Loader from '../../Reusables/Loader'
 import { Grid, Stack, Box, useTheme, useMediaQuery, Typography, Skeleton } from '@mui/material'
 import './Home_Featured_Jobs.css'
 const Home_Featured_Jobs = () => {
@@ -15,14 +15,14 @@ const Home_Featured_Jobs = () => {
     queryKey: ['jobs'],
     queryFn: fetchJobs
   })
+  const theme = useTheme()
+  const query = useMediaQuery(theme.breakpoints.up('md'))
 
   const loading = status === 'loading'
   const Error = status === 'error'
 
-  console.log(loading)
-  console.log(Error)
   if (isLoading) {
-    return <Skeleton height='8rem' width='12rem'></Skeleton>
+    return <Loader/>
   }
 
   if (isError) {
@@ -30,9 +30,9 @@ const Home_Featured_Jobs = () => {
   }
 
   return (
-    <Grid xs={11.5} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
+    <Grid xs={12} md={11.5} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
       <Stack width='100%' direction='row' gap='2rem' alignItems='center' justifyContent='space-between' >
-        <Typography variant='h3' className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
+        <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
           Featured  <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
         </Typography>
         <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
@@ -43,18 +43,18 @@ const Home_Featured_Jobs = () => {
         </Link>
       </Stack>
 
-      <Grid xs={12} container alignItems='flex-start' rowGap='3rem' justifyContent='space-between'>
+      <Grid xs={12}  container alignItems='flex-start' rowGap='3rem' justifyContent='space-between'>
         {data.data.map((data) => {
           const { id, attributes } = data
-          const { Job_Title, Job_Description, employments, categories, companies, locations } = attributes
+          const { Job_Title, Job_Description, employment, categories, company, location } = attributes
           const categoryName = categories.data[1]?.attributes.Category_Name
-          const employmentType = employments.data[1]?.attributes.employment
-          const companyName = companies.data[2]?.attributes.Company_Name;
-          const location = locations.data[2]?.attributes.head_office;
-          const imgUrl = companies.data[2].attributes.Company_Logo.data.attributes.url
-
+          const employmentType = employment.data?.attributes.employment
+          const companyName = company.data?.attributes.Company_Name;
+          const jobLocation = location.data?.attributes.head_office;
+          const imgUrl = company.data?.attributes.Company_Logo.data.attributes.url  
+       
           return (
-            <Grid key={Job_Title} item sx={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', justifyContent: "space-between", flexDirection: 'column' }} xs={12} md={3}>
+            <Grid key={Job_Title} item sx={{ display: 'flex', alignItems:`${ query ? 'flex-start':'center'}`, gap: '2rem', justifyContent: "space-between", flexDirection: 'column' }} xs={12} md={3}>
 
               {loading ? <Skeleton height='18rem' width='95%' /> : <Stack height='18rem' gap='1rem' border='.5px solid #e5e5e5' alignItems='center' justifyContent='center' width='95%' direction='column'>
                 <Stack height='90%' alignItems='center' justifyContent='space-around' width='95%' className='Jobsly_Featured_Jobs_Container'>
@@ -77,7 +77,7 @@ const Home_Featured_Jobs = () => {
                       </Typography>
 
                       <Typography fontFamily={bodyFont} fontWeight='500' variant='body1' component='p'>
-                        {location}
+                        {jobLocation}
                       </Typography>
                     </Stack>
                     <Typography color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontWeight='500' variant='subtitle1'> {Job_Description.substring(0, 83)}... </Typography>
@@ -85,7 +85,7 @@ const Home_Featured_Jobs = () => {
                   </Stack>
 
                   <Stack width='93%' alignItems='flex-start' justifyContent='flex-start' direction='column'>
-                    <Box className={`Jobsly_Featured_Jobs -${categoryName}`} borderRadius='20px' height='2rem' display='flex' alignItems='center' justifyContent='center' width='8rem'>
+                    <Box className={`Jobsly_Featured_Jobs ${categoryName}`} borderRadius='20px' height='2rem' display='flex' alignItems='center' justifyContent='center' width='8rem'>
                       <Typography fontFamily={bodyFont} fontWeight='500' fontSize='.9rem' variant='subtitle1' component='p'>
                         {categoryName}
                       </Typography>

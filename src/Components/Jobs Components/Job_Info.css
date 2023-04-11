@@ -1,0 +1,36 @@
+.Jobsly_Jobs_List_Pagination ul li button {
+    color: #fff;
+    background-color: #4640de;
+    font-family: 'Gilroy' sans-serif;
+}
+
+.Jobsly_Jobs_List_Pagination ul li :hover {
+    border: none;
+    background-color: #4540dede;
+    color: #fff;
+    font-family: 'Gilroy' sans-serif;
+}
+
+.Jobsly_Info_Container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.Jobsly_Jobs_Filter {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.Jobsly_Info_Container::-webkit-scrollbar {
+    display: none;
+}
+
+.MuiFormControlLabel-label {
+    font-family: 'Gilroy', sans-serif;
+}
+
+.Job_Filter_Label span {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+
+}

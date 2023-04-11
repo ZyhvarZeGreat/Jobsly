@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <Grid
       style={centerStyle}
-      minHeight="6rem"
+      minHeight="8rem"
       container
       alignItems="center"
       justifyContent="center"
@@ -53,7 +53,12 @@ const Navbar = () => {
             width={query ? "100%" : "92%"}
           >
             <Link color="#000" to="/">
-              <Typography color='var(--secondary-color)' variant="h3" fontFamily={fontName} component="h4">
+              <Typography
+                color="var(--secondary-color)"
+                variant="h3"
+                fontFamily={fontName}
+                component="h4"
+              >
                 Jobsly
               </Typography>
               <img src="" alt="" />
@@ -103,7 +108,7 @@ const Navbar = () => {
                 fontWeight="600"
                 color="var(--secondary-color)"
                 className="Jobsly_Navbar_Action_Links_Text_Login"
-                fontSize='1.1rem'
+                fontSize="1.1rem"
               >
                 Login
               </Typography>

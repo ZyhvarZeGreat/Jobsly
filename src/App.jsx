@@ -16,6 +16,7 @@ const queryClient= new QueryClient()
   <div className="App">
   <Navbar/>
 
+
 <Grid alignItems='center' justifyContent='center'  container xs={12} md={11.5} className='App_Container'>
 <Routes>
 <Route path='/' element={<Home/>}/>

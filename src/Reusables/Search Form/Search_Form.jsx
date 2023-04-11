@@ -9,12 +9,12 @@ const {widthMax,widthMin,inputWidth,selectWidth} = props
 
   const handleSubmit = (e) => {
     e.preventDefault()
-  }
+  }  
   return (
     <Stack width={query ? `${widthMax}`:`${widthMin}`} gap='2rem' alignItems='flex-start' justifyContent='space-around' className='Jobsly_Hero_Search_Form_Container' direction='row' >
 
       <form className='Jobsly_Hero_Search_Form'>
-        <Stack alignItems='center' justifyContent='flex-start' gap={query ?'3rem':'.6rem'} direction={query ?'row':'column' }width='60%'>
+        <Stack alignItems='center' justifyContent='flex-start' gap={query ?'3rem':'.6rem'} direction={query ?'row':'column' }width={query ? '60%':'95%'}>
           <Box alignItems='center' gap='1rem' display='flex' justifyContent='center' className='Jobsly_Hero_Search_Form_Search_Keyword' flexDirection='row' >
             <UilSearchAlt/>
             <input className='Jobsly_Hero_Search_Input' placeholder='Job title or keyword' />
@@ -35,7 +35,7 @@ const {widthMax,widthMin,inputWidth,selectWidth} = props
 
         <Stack width='25%' className='Jobsly_Search_Button'   alignItems='center' justifyContent='center'>
         <button className='Jobsly_Hero_Search_Form_Button'>
-          <p>Search my job</p>
+          <p>Search</p>
         </button>
         </Stack>
      

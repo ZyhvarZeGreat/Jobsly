@@ -1,9 +1,11 @@
 import React from 'react'
-import { Grid, Stack, Typography, Skeleton } from '@mui/material'
+import { Grid, Stack, Typography, Skeleton, useMediaQuery, useTheme } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { UilArrowRight } from '@iconscout/react-unicons'
 import { useQuery } from '@tanstack/react-query'
+import Loader from  '../../Reusables/Loader'
 import fetchCategories from '../../Services/fetchCategories'
+import Home_Category_Card from './Home_Category_Card'
 import './Home_Categories.css'
 const Home_Categories = () => {
   const headerFont = 'Clash Display Semibold,sans-serif'
@@ -11,13 +13,15 @@ const Home_Categories = () => {
 
   const categoryQuery = useQuery({
     queryKey: ['categories'],
+    enabled:true,
     queryFn: fetchCategories
   })
-
+  const theme = useTheme()
+  const query = useMediaQuery(theme.breakpoints.up('md'))
   const { data, error, isError, isLoading } = categoryQuery
 
   if (isLoading) {
-    return <div>Loading</div>
+    return <Loader/>
   }
 
   if (isError) {
@@ -28,9 +32,9 @@ const Home_Categories = () => {
 
 
   return (
-    <Grid xs={11.5} gap='2rem' direction='column' container className='Jobsly_Home_Categories'>
+    <Grid xs={11.5} gap='3rem' direction='column' container className='Jobsly_Home_Categories'>
       <Stack direction='row' className='Jobsly_Home_Categories_Header' alignItems='center' justifyContent='space-between' width='100%'>
-        <Typography variant='h3' className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
+        <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
           Explore by <span style={{ color: 'var(--hero-stat-color' }}>category</span>
         </Typography>
 
@@ -43,29 +47,14 @@ const Home_Categories = () => {
       </Stack>
 
 
-      <Grid xs={12} container alignItems='center' justifyContent='space-between' rowGap='1rem'>
-        {data.data.map((category) => {
+      <Grid xs={12} container alignItems='center' justifyContent={'center'}rowGap='1rem'>
+        {data?.data?.map((category) => {
           const { attributes } = category
-          const { Category_Name, jobs } = attributes
+          const { Category_Name, jobs,icon } = attributes
           return (
-            <Grid sx={{ display: 'flex', cursor: 'pointer', alignItems: 'center', justifyContent: 'flex-start' }} xs={12} md={3} item className='Jobsly_Home_Categories_Item_Container'>
-              {isLoading ? <Skeleton height='15rem' width='90%'/>  : <Stack border='.5px solid #e5e5e5' height='15rem' direction='column' gap='1rem' width='90%' alignItems='center' justifyContent='center' className='Jobsly_Home_Categories_Item'>
-                <Stack width='90%' direction='row' alignItems='center' justifyContent='flex-start'>
-                  <Typography fontFamily={headerFont} variant='h4'>
-                    {Category_Name}
-                  </Typography>
-                </Stack>
-
-                <Stack width='90%' direction='row' alignItems='center' justifyContent='flex-start' gap='2rem'>
-                  <Typography fontFamily={bodyFont} fontWeight='500' fontSize='1.1rem' variant='subtitle'>
-                    {jobs.data.length} jobs available
-                  </Typography>
-
-                  <UilArrowRight />
-                </Stack>
-              </Stack>}
-            </Grid>
-
+       <>
+       { isLoading ? <Loader/>:<Home_Category_Card loading={isLoading} query={query} catIcon={icon?.data?.attributes.url} icon={<UilArrowRight />} headerFont={headerFont} bodyFont={bodyFont} categoryName={Category_Name} jobCount={jobs.data.length}/>}
+       </>
           )
         })}
       </Grid>

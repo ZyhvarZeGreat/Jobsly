@@ -15,7 +15,7 @@
     background-color: var(--design-text-background-color);
     color: var(--design-text-color)
 }
-.Design {
+.-Design {
     background-color: var(--design-text-background-color);
     color: var(--design-text-color)
 }
@@ -24,6 +24,7 @@
     background-color: var(--marketing-text-background-color);
     color: var(--marketing-text-color);
 }
+
 
 
 .Jobsly_Featured_Jobs_Container{

@@ -48,6 +48,9 @@
     font-size: var(--text-base);
 }
 
+.Jobsly_Footer_Input::placeholder{
+font-family: 'Gilroy',sans-serif;
+}
 
 
 .subscribe_input_btn {

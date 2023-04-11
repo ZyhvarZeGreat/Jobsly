@@ -1,0 +1,19 @@
+.Jobsly_Company_Categories_Item{
+    border: 1px solid #e5e5e5;
+    margin-bottom: 1.3rem;
+    cursor: pointer;
+}
+
+.Jobsly_Company_Categories_Item:hover{
+background-color: var(--secondary-color);
+transition: all ease-in .4s;
+color: #fff;
+}
+
+.Jobsly_Company_Categories_Items{
+   scrollbar-width: none;
+   -ms-overflow-style:none;
+}
+.Jobsly_Company_Categories_Items ::-webkit-scrollbar{
+   display: none;
+ }

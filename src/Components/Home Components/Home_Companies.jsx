@@ -1,40 +1,41 @@
 import React from "react";
 import { Grid, Stack, useTheme, useMediaQuery, Typography } from "@mui/material";
 const Home_Companies = () => {
+  const theme = useTheme()
+  const query = useMediaQuery(theme.breakpoints.up('md'))
   const fontName = 'Gilroy,sans-serif';
   const logo_data = [
     {
-      logo: '',
-      logo_alt: 'amd'
+      logo: 'flutterwave.svg',
+      logo_alt: 'Flutterwave'
     },
     {
-      logo: '',
-      logo_alt: 'tesla'
+      logo: 'binance.svg',
+      logo_alt: 'binance'
     },
     {
-      logo: '',
-      logo_alt: 'microsoft'
+      logo: 'MoonPay.svg',
+      logo_alt: 'MoonPay'
     },
     {
-      logo: '',
-      logo_alt: 'intel'
+      logo: 'paystack.svg',
+      logo_alt: 'Paystack'
     },
     {
-      logo: '',
-      logo_alt: 'mailchimp'
+      logo: 'piggyvest.svg',
+      logo_alt: 'PiggyVest'
     },
   ];
   return (
     <Grid
       xs={11.5}
-
       container
       alignItems="center"
       justifyContent="center"
 
       className="Jobsly_Home_Companies"
     >
-      <Stack width='100%' height='4rem' justifyContent='center' gap='2rem' direction='column' >
+      <Stack width='100%' height='4rem' alignItems={query ? 'flex-start':'center'} justifyContent='center' gap='2rem' direction='column' >
         <Typography fontSize='1.3rem' fontFamily={fontName} fontWeight={500} color='var( --footer-alt-text-color)' variant="subtitle1">
           Companies we've helped grow
         </Typography>
@@ -43,8 +44,8 @@ const Home_Companies = () => {
         logo_data.map((logo_item) => {
           const { logo, logo_alt } = logo_item
           return (
-            <Grid item sx={{ height: '4rem', display: 'flex', alignItems: 'center' }} xs={12} md={2.4} backgroundColor='red' className=''>
-              {logo_alt}
+            <Grid item sx={{ height: '8rem', display: 'flex', alignItems: 'center', justifyContent: `${query ? 'flex-start' : 'center'}` }} xs={12} md={2.4} className=''>
+              <img style={{ height: '6rem', width: '12rem' }} src={`../${logo}`} alt={logo_alt} />
             </Grid>
           )
         })

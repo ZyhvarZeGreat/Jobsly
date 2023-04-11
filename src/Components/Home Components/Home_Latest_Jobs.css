@@ -1,27 +1,109 @@
-.Latest_Full-Time{
+/* STYLES FOR ALL THE EMPLOYMENT TYPES */
+.-Full-Time{
     background-color:  var(--design-text-background-color);
     color: var(--design-text-color);
 }
 
-.Latest_Contract{
-    background-color:  var(--technology-text-background-color);
-    color: var(--technology-text-color);
-}
-.Latest_Business{
-    border: 1px solid  var(--secondary-color);
+.-Internship{
+    background-color:  var(--crypto-text-color);
     color: var(--secondary-color);
 }
-.Latest_Cloud{
-    border: 1px solid  var(--marketing-text-background-color);
+.-Remote{
+    background-color:  var(--marketing-text-background-color);
     color: var(--marketing-text-color);
 }
 
-.Latest_Media{
+.-Contract{
+    background-color:  var(--technology-text-background-color);
+    color: var(--technology-text-color);
+}
+.-Part-Time{
+    background-color:  var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* STYLES FOR ALL THE CATEGORIES */
+
+
+.Cloud{
+    background-color: var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+.-Cloud{
+    border: 1px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+.-Design{
     border: 1px solid  var(--design-text-background-color);
     color: var(--design-text-color);
 }
 
-.Latest_Fintech{
-    border: 1px solid  var(--design-text-background-color);
+.Design{
+    background-color:   var(--design-text-background-color);
     color: var(--design-text-color);
 }
+
+
+.-Media{
+    border: 2px solid  var(--technology-text-background-color);
+    color: var(--technolgy-text-color);
+}
+.Media{
+    background-color:   var(--technology-text-background-color);
+    color: var(--technology-text-color);
+}
+.-Fintech{
+    border: 2px solid  var(--design-text-background-color);
+    color: var(--design-text-color);
+}
+
+.-Web3{
+    border: 2px solid  var(--crypto-text-color);
+    color: var(--secondary-color);
+}
+
+.-Healthcare{
+    border: 2px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+.-Hosting{
+    border: 2px solid  var(--crypto-text-color);
+    color: var(--secondary-color);
+}
+
+.-Legal{
+    border: 2px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+.-Gaming{
+    border: 2px solid  var(--technology-text-background-color);
+    color: var(--technlogy-text-color);
+}
+.-Data{
+    border: 2px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+.-Advertising{
+    border: 2px solid  var(--crypto-text-color);
+    color: var(--secondary-color);
+}
+
+.-Education{
+    border: 2px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+.-Tech{
+    border: 2px solid  var(--technology-text-background-color);
+    color: var(--technlogy-text-color);
+}
+.-Business{
+    border: 2px solid  var(--marketing-text-background-color);
+    color: var(--marketing-text-color);
+}
+
+

@@ -4,27 +4,31 @@ import { fetchCompanies } from '../../Services/fetchCompanies'
 import { bodyFont, headerFont } from '../../Reusables/constants'
 import { useQuery } from '@tanstack/react-query'
 import './Recommended_Jobs.css'
-import { baseUrl } from '../../Reusables/constants'
+import Recommended_Companies_Card from './Recommended_Companies_Card'
+import { baseUrl,subHeadingFontSize } from '../../Reusables/constants'
+import Loader from '../../Reusables/Loader'
 const Recommended_Companies = () => {
 
+    const theme = useTheme()
+    const query = useMediaQuery(theme.breakpoints.up('md'))
     const { data, isError, isLoading } = useQuery({
         queryKey: ['companies'],
         queryFn: fetchCompanies
     })
 
     if (isLoading) {
-        return <Skeleton height='10rem' width='20rem' />
+        return <Loader/>
     }
 
-    if (isLoading) {
+    if (isError) {
         return <div>Error</div>
     }
     return (
-        <Grid xs={11.5} container backgroundColor='blue'>
+        <Grid xs={11} container >
             <Grid xs={12} container className='Jobsly_Recommended_Companies_Header'>
 
-                <Stack height='8rem' >
-                    <Typography fontFamily={headerFont} variant='h3' component='h2'>
+                <Stack height={query ? '8rem':'9rem'}>
+                    <Typography fontSize={subHeadingFontSize} fontFamily={headerFont} variant='h3' component='h2'>
                         Recommended Companies
                     </Typography>
                     <Typography fontFamily={bodyFont} variant='body1' component='p'>
@@ -37,25 +41,9 @@ const Recommended_Companies = () => {
                     {
                         data.data.map((data) => {
                             const { Company_Name, Company_Description, jobs, categories, Company_Logo } = data.attributes
-                           const imgUrl = Company_Logo?.data?.attributes.url
-
-                            console.log(Company_Name)
+                            const imgUrl = Company_Logo?.data?.attributes.url
                             return (
-                                <Grid key={Company_Name} xs={12} backgroundColor='red' md={3} item >
-                                    <Stack backgroundColor='aqua' height='15rem' width='90%'>
-                                      <Box width='8rem' height='3rem' className='Jobsly_Recommended_Companies_Image_Container'>
-                                      <img className='Jobsly_Recommended_Companies_Image' src={`${baseUrl}${imgUrl}`} alt='' />
-                                      </Box>
-                                        <Typography variant='h4' component='h4'>
-                                            {Company_Name}
-                                        </Typography>
-                                        <Typography variant='body1' component='p'>
-                                            {Company_Description.substring(0,200)}...
-                                        </Typography>
-                                        <Box className={`${categories}`}></Box>
-                                        {jobs.data.length}
-                                    </Stack>
-                                </Grid>
+                                <Recommended_Companies_Card key={Company_Name} Company_Name={Company_Name} Company_Logo={Company_Logo} categories={categories} bodyFont={bodyFont} jobs={jobs} Company_Description={Company_Description} imgUrl={imgUrl} />
                             )
                         })
                     }

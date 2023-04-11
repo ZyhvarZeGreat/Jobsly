@@ -4,7 +4,7 @@ export default function company (){
 
 
     const fetchCompany = async ()=>{
-        const response = await fetch("http://localhost:1337/api/Companies");
+        const response = await fetch(process.env.REACT_APP_BASE_URL + 'Companies');
         return response.json();
     }
 
