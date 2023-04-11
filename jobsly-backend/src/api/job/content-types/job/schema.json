@@ -28,35 +28,34 @@
       "target": "api::category.category",
       "inversedBy": "jobs"
     },
-    "companies": {
+    "company": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::company.company",
       "inversedBy": "jobs"
     },
-    "employments": {
+    "employment": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::employment.employment",
-      "mappedBy": "jobs"
+      "inversedBy": "jobs"
     },
-    "levels": {
+    "level": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::level.level",
-      "mappedBy": "jobs"
+      "inversedBy": "jobs"
     },
-    "locations": {
+    "location": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::location.location",
-      "mappedBy": "jobs"
+      "inversedBy": "jobs"
     },
     "capacity": {
-      "type": "enumeration",
-      "enum": [
-        "capacity"
-      ]
+      "type": "integer",
+      "default": 10,
+      "min": 1
     }
   }
 }

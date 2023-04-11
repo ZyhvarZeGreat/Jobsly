@@ -16,9 +16,15 @@
     },
     "jobs": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::job.job",
-      "inversedBy": "levels"
+      "mappedBy": "level"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "levels"
     }
   }
 }

@@ -38,17 +38,17 @@
       "target": "api::category.category",
       "inversedBy": "company"
     },
-    "jobs": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::job.job",
-      "mappedBy": "companies"
-    },
     "locations": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::location.location",
       "mappedBy": "companies"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job",
+      "mappedBy": "company"
     }
   }
 }

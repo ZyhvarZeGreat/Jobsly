@@ -23,20 +23,27 @@
       "mappedBy": "categories"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "company": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::company.company",
       "mappedBy": "categories"
+    },
+    "levels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::level.level",
+      "inversedBy": "categories"
     }
   }
 }

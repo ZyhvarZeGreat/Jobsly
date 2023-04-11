@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "jobs": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::job.job",
-      "inversedBy": "locations"
-    },
     "head_office": {
       "type": "string"
     },
@@ -26,6 +20,12 @@
       "relation": "manyToMany",
       "target": "api::company.company",
       "inversedBy": "locations"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job",
+      "mappedBy": "location"
     }
   }
 }
