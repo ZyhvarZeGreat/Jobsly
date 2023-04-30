@@ -46,7 +46,7 @@ const Home_Latest_Jobs = () => {
     if (isLoading){
         return <Loader/>
     }
-    if (isError && error) {
+    if (isError && error.response===undefined) {
         {console.log(error)}
         return <div> Error:{error.message}</div>
       }
