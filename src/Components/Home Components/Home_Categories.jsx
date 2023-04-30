@@ -45,7 +45,7 @@ const Home_Categories = () => {
   if (isLoading) {
     return <Loader/>
   }
-  if (isError && error) {
+  if (isError && error.response===undefined) {
     return <div> Error:{error.message}</div>
   }
 

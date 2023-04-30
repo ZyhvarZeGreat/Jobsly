@@ -47,7 +47,7 @@ const Home_Featured_Jobs = () => {
     return <Loader/>
   }
 
-  if (isError && error) {
+  if (isError && error.response===undefined) {
     return <div> Error:{error.message}</div>
   }
 
