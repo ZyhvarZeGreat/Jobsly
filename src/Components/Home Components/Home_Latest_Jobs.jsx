@@ -48,7 +48,7 @@ const Home_Latest_Jobs = () => {
     }
     if (isError && error.response===undefined) {
         {console.log(error)}
-        return <div> Error:{error.message}</div>
+        return <ErrorHandler message={error.message}/>
       }
     
     const queryFixer = (param, target, id) => {

@@ -48,7 +48,8 @@ const Home_Featured_Jobs = () => {
   }
 
   if (isError && error.response===undefined) {
-    return <div> Error:{error.message}</div>
+    console.log(status)
+    return <ErrorHandler message={error.message}/>
   }
 
   return (
