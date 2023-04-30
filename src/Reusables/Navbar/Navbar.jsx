@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Mobile_nav from "./Mobile_nav";
+import { bodyFont } from "../constants";
 import {
   Grid,
   Box,
@@ -13,14 +15,16 @@ import {
 const Navbar = () => {
   const theme = useTheme();
   const query = useMediaQuery(theme.breakpoints.up("lg"));
-
-  const fontName = "Clash Grotesk Medium,sans-serif";
+  const [opened, setOpened] = useState(false)
+  const headerFont = "Clash Grotesk Medium,sans-serif";
   const centerStyle = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   };
+
+  console.log(opened)
   return (
     <Grid
       style={centerStyle}
@@ -39,13 +43,7 @@ const Navbar = () => {
         xs={6}
         md={8}
       >
-        <Stack
-          className="Jobsly_Navbar_Logo"
-          alignItems="center"
-          width={query ? "20%" : "100%"}
-          justifyContent={query ? "flex-start" : "center"}
-          direction="row"
-        >
+        <Stack className="Jobsly_Navbar_Logo" alignItems="center" width={query ? "20%" : "100%"} justifyContent={query ? "flex-start" : "center"} direction="row" >
           <Box
             display="flex"
             justifyContent="flex-start"
@@ -56,8 +54,9 @@ const Navbar = () => {
               <Typography
                 color="var(--secondary-color)"
                 variant="h3"
-                fontFamily={fontName}
+                fontFamily={headerFont}
                 component="h4"
+                style={{ zIndex: 15 }}
               >
                 Jobsly
               </Typography>
@@ -126,10 +125,11 @@ const Navbar = () => {
             justifyContent="flex-end"
             height="3rem"
           >
-            <button className="nav-btn"> Click</button>
+            <button style={{ zIndex: 15 }} className="nav-btn" onClick={() => { setOpened(!opened) }}> Click</button>
           </Box>
         )}
       </Grid>
+      {opened && !query && <Mobile_nav font={bodyFont} opened={opened} setOpened={setOpened} />}
     </Grid>
   );
 };

@@ -3,10 +3,12 @@
     flex-direction:row;
 } */
 
+
 .Jobsly_Navbar_Link_Text {
     font-size: 1.1rem;
     font-family: 'Gilroy', sans-serif;
     font-weight: 600;
+
 }
 
 .Jobsly_Navbar_Action_Links_Text {
@@ -14,6 +16,7 @@
     font-family: 'Gilroy', sans-serif;
     font-weight: 600;
 }
+
 
 .Jobsly_Navbar_Action_Links_Secondary {
     height: 3rem;

@@ -34,3 +34,7 @@
     font-weight: 500;
 
 }
+input::placeholder{
+    font-family: 'Gilroy',sans-serif;
+    font-weight: 500;
+}

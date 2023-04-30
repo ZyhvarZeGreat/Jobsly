@@ -6,6 +6,7 @@ import { baseUrl, headerFont, bodyFont } from '../../Reusables/constants'
 import { Link } from 'react-router-dom'
 import Loader from '../../Reusables/Loader'
 import { UilArrowRight } from '@iconscout/react-unicons'
+import ErrorHandler from '../../Reusables/ErrorHandler'
 import './Home_Latest_Jobs.css'
 const Home_Latest_Jobs = () => {
     const headerFont = 'Clash Display Semibold,sans-serif'
@@ -14,11 +15,28 @@ const Home_Latest_Jobs = () => {
     const { data, error, isError, isLoading } = useQuery({
         queryKey: ['jobs', 1],
         queryFn: fetchLatestJobs,
+        retry:3,
         onError:(error) => {
-            if (error.response.status === 401 || 500 || 503 || 404){
-                return <div> {error.message} <button onClick={()=> {window.location.reload}}> reload page</button> </div>
+            if(error.response.status === 401){
+                console.log('You are not Authorized')
             }
-        },
+            else if(error.response.status === 403){
+                console.log('You are Forbidden')
+            }
+            else if(error.response.status === 404){
+                console.log('Item not found')
+            }
+            else if(error.response.status === 500){
+                console.log('Internal Server Error')
+            }
+            
+            else if(error.isAxiosError && error.response.status === undefined){
+                console.log('CORS error occured')
+            }
+            else{
+                console.log(error)
+            }
+            },
         enabled:true
     })
 
@@ -29,8 +47,8 @@ const Home_Latest_Jobs = () => {
         return <Loader/>
     }
 
-    if (isError) {
-        return <div>error</div>
+    if (  isError) {
+        return <ErrorHandler/>
     }
     const queryFixer = (param, target, id) => {
         return (`${param}?.data[${id}].attributes.${target}`)
@@ -66,7 +84,7 @@ const Home_Latest_Jobs = () => {
 
                         return (
                             <Grid key={Job_Title} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }} item xs={12} sm={6} md={5.7}>
-                                {isError ? <div>Error</div> : <div></div>}
+                                {isError && ErrorHandler}
                                 {isLoading ? <Skeleton width='100%' height='20rem'></Skeleton> :
                                     <Stack height={query ? '13rem':'15rem' }width='100%' alignItems={query ? 'flex-start':'center'}>
                                         <Stack alignItems={ query ? 'flex-end':'center'} gap={query ? '':'1rem'} direction={query  ? 'row':'column'} border='1px solid #e5e5e5' justifyContent='center' height='100%' width={query ? '90%':'95%'} >

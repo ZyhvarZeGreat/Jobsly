@@ -6,6 +6,8 @@ import { UilLayers, UilTable } from '@iconscout/react-unicons'
 import { useQuery } from '@tanstack/react-query'
 import { bodyFont, headerFont, baseUrl } from '../../Reusables/constants'
 import Loader from '../../Reusables/Loader'
+import loaderSkeleton from '../../Reusables/SkeletonLoader'
+import ErrorHandler from '../../Reusables/ErrorHandler'
 import { AppPagination } from '../../Reusables/index'
 import Job_Filter from './Job_Filter'
 import Job_Info_List from './Job_Info_List'
@@ -14,7 +16,11 @@ const Job_Info = () => {
   const [categoryFilter, setCategoryFilter] = useState([])
   const [levelFilter, setLevelFilter] = useState([])
   const [employmentFilter, setEmploymentFilter] = useState([])
-
+  const [currentPage, setCurrentPage] = useState(1)
+  const [totalPage, setTotalPage] = useState(1)
+  const [sortValue, setSortValue] = useState('updatedAt')
+  const [sortOrder, setSortOrder] = useState('asc')
+  const [count, setCount] = useState(0)
   const theme = useTheme()
   const query = useMediaQuery(theme.breakpoints.up('md'))
   const categoryQuery = categoryFilter.map((filter) =>
@@ -37,71 +43,124 @@ const Job_Info = () => {
   }
 
 
+  const handlePageChange = (e) => {
+    setCurrentPage(Number(e.target.textContent))
+  }
+
+
   const jobQuery = useQuery({
     queryKey: [`category`],
-    queryFn: fetchAllJobs
+    queryFn: fetchAllJobs,
+    onError: (error) => {
+      if (error.response.status === 401) {
+        console.log('You are not Authorized')
+      }
+      else if (error.response.status === 403) {
+        console.log('You are Forbidden')
+      }
+      else if (error.response.status === 404) {
+        console.log('Item not found')
+      }
+      else if (error.response.status === 500) {
+        console.log('Internal Server Error')
+      }
+
+      else if (error.isAxiosError && error.response.status === undefined) {
+        console.log('CORS error occured')
+      }
+      else {
+        console.log(error)
+      }
+    }
   })
 
-  const { data, isLoading, isError } = jobQuery
+  const { data, isLoading, isError,error } = jobQuery
 
-
+ const jobCount = data?.meta?.pagination?.total
   const sortParams = [
-    'Most Relevant', 'Highest Salary', 'Date Posted', 'Capacity'
+
+    {
+      text: 'Date Posted',
+      value: 'updatedAt'
+    },
+
+
+
+    {
+      text: ' Salary',
+      value: 'Salary'
+    },
+
+    {
+      text: 'Capacity',
+      value: 'capacity'
+    },
+
   ]
 
   if (isLoading) {
-    return <Loader />
+    return <Loader/>
   }
   if (isError) {
-    return <div>error</div>
+    return <ErrorHandler />
   }
 
-data?.data.map((data)=> {
-  const {Salary,capacity} = data?.attributes
-  console.log(Salary)
-})
+  // console.log(data.meta.pagination.total)
+
   return (
     <Grid marginBottom='3rem' marginTop={query ? '' : '2rem'} xs={12} container justifyContent='space-between' className='Jobsly_Jobs_Info_Container'>
       <Stack gap='.4rem' height='8rem' alignItems='center' className='Jobsly_Job_Info_Header' width='100%' justifyContent='space-between' direction={query ? 'row' : 'column'}>
         <Stack direction={query ? 'column' : 'row'} alignItems={query ? '' : 'center'} gap={query ? '' : '2rem'} >
-          <Typography fontFamily={headerFont} fontWeight='500' fontSize={query ? '' : 'var(--text-3xl)'} variant='h3' component='h4'>
+          <Typography fontFamily={headerFont} fontWeight='500' fontSize={query ? 'var(--text-3xl)' : ''} variant='h3' component='h4'>
             All Jobs
           </Typography>
 
           <Typography fontFamily={bodyFont} fontWeight='400' color='var(--footer-alt-text-color)' variant='body1' component='p'>
-            Showing {data?.data?.length} results
+            Showing {jobCount} results
           </Typography>
         </Stack>
 
-        <Stack alignItems='center' gap='1rem' width={query ? ' 50%' : '100%'} marginRight='2.8rem' direction='row' justifyContent='flex-end' className='Jobsly_Job_Info_Sort'>
+        <Stack alignItems='center' gap='1rem' width={query ? ' 50%' : '100%'} marginRight='2.8rem' direction={'row'} justifyContent='flex-end' className='Jobsly_Job_Info_Sort'>
           <Typography variant='body1' fontFamily={bodyFont} fontWeight='500' color='var(--footer-alt-text-color)' component='p'>
             Sort by:
           </Typography>
 
+          <form>
+
+            <select onChange={(e) => { setSortValue(e.target.value), console.log(e.target.value) }} style={{ width: '9rem',backgroundColor:'transparent', height: '2.2rem', fontFamily: `${bodyFont}`, fontWeight: '500', border: 'none',borderBottom:'1px solid #e5e5e5', fontSize: 'var(--text-base)' }} placeholder={sortParams[0]}>
+              {/*     DATA CAN BE SORTED ACCORDING TO THE HIGHEST PAY,DATE POSTED,VACANCY */}
+              {
+                sortParams.map((params) => {
+                  return (
+                    <option key={params.text} value={params.value}>
+                      <Typography variant='body2' component='span'>
+                        {params.text}
+                      </Typography>
+                    </option>
+                  )
+                })
+              }
 
 
-          <select style={{ width: '9rem', height: '2.2rem', fontFamily: `${bodyFont}`, fontWeight: '500', border: 'none', fontSize: 'var(--text-base)' }} value={sortParams[0]}>
-            {/*     DATA CAN BE SORTED ACCORDING TO THE HIGHEST PAY,DATE POSTED,VACANCY */}
-            {
-              sortParams.map((params) => {
-                return (
-                  <option key={params} value={params}>
-                    {params}
-                  </option>
-                )
-              })
-            }
-            {/* MAKE THIS PART DYNAMIC ACCORDING TO THE SORTED STATE */}
+              {/* MAKE THIS PART DYNAMIC ACCORDING TO THE SORTED STATE */}
+            </select>
+          </form>
+
+          <select onChange={(e) => { setSortOrder(e.target.value) }} style={{ width: '9rem',backgroundColor:'transparent', height: '2.2rem', fontFamily: `${bodyFont}`, fontWeight: '500', border: 'none', borderBottom:'1px solid #e5e5e5',  fontSize: 'var(--text-base)' }} placeholder={sortParams[0]}>
+            <option value='asc'>Ascending</option>
+            <option value='desc'>Descending</option>
           </select>
 
-          <Stack alignItems='center' color='var(--secondary-color)' justifyContent='center' direction='row' gap='1rem' className='Jobsly_Info_View'>
-            <button onClick={() => setViewState(3.73)} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-              <UilTable fill='var(--secondary-color)' stroke='.4rem' />
-            </button>
-            <button onClick={() => setViewState(12)} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-              <UilLayers fill='var(--secondary-color)' stroke='.4rem' />
-            </button>
-          </Stack>
+
+          {
+            query && <Stack alignItems='center' color='var(--secondary-color)' justifyContent='center' direction='row' gap='1rem' className='Jobsly_Info_View'>
+              <button onClick={() => setViewState(3.73)} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+                <UilTable fill='var(--secondary-color)' stroke='.4rem' />
+              </button>
+              <button onClick={() => setViewState(12)} style={{ border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+                <UilLayers fill='var(--secondary-color)' stroke='.4rem' />
+              </button>
+            </Stack>}
         </Stack>
       </Stack>
 
@@ -111,12 +170,12 @@ data?.data.map((data)=> {
       {/* HOW DO I GET THE DATA REQUIRED TO FILTER THE JOB INFO DATA */}
 
 
-      <Job_Info_List categoryQuery={categoryQuery} viewState={viewState} employmentQuery={employmentQuery} levelQuery={levelQuery} />
+      <Job_Info_List handlePageChange={handlePageChange} sortOrder={sortOrder} sortValue={sortValue} currentPage={currentPage} setCurrentPage={setCurrentPage} totalPage={totalPage} setTotalPage={setTotalPage} count={count} setCount={setCount} categoryQuery={categoryQuery} viewState={viewState} employmentQuery={employmentQuery} levelQuery={levelQuery} />
+
 
       <Grid xs={12} backgroundColor='' height='6rem' container alignItems='center' justifyContent='center'>
-        <AppPagination font={bodyFont} onChange={() => console.log('changed')} count={Math.ceil(data.data.length / 7)} />
+        <AppPagination font={bodyFont} page={currentPage} onChange={handlePageChange} count={totalPage} />
       </Grid>
-
     </Grid>
   )
 }

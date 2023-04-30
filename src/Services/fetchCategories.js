@@ -1,7 +1,8 @@
 import axios from "axios";
-
+import { baseUrl } from "../Reusables/constants";
 async function fetchCategories(){
-    const {data} = await axios.get('http://localhost:1337/api/categories?fields=category_name&populate=jobs,icon&pagination[pageSize]=8')
+    console.log(baseUrl)
+    const {data} = await axios.get(`${baseUrl}/categories?fields=category_name&populate=jobs,icon&pagination[pageSize]=8`)
     return data
 }
 
