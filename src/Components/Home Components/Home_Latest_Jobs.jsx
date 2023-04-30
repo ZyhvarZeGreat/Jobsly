@@ -16,27 +16,27 @@ const Home_Latest_Jobs = () => {
         queryKey: ['jobs', 1],
         queryFn: fetchLatestJobs,
         retry:3,
-        onError:(error) => {
-            if(error.response.status === 401){
-                console.log('You are not Authorized')
-            }
-            else if(error.response.status === 403){
-                console.log('You are Forbidden')
-            }
-            else if(error.response.status === 404){
-                console.log('Item not found')
-            }
-            else if(error.response.status === 500){
-                console.log('Internal Server Error')
-            }
+        // onError:(error) => {
+        //     if(error.response.status === 401){
+        //         console.log('You are not Authorized')
+        //     }
+        //     else if(error.response.status === 403){
+        //         console.log('You are Forbidden')
+        //     }
+        //     else if(error.response.status === 404){
+        //         console.log('Item not found')
+        //     }
+        //     else if(error.response.status === 500){
+        //         console.log('Internal Server Error')
+        //     }
             
-            else if(error.isAxiosError && error.response.status === undefined){
-                console.log('CORS error occured')
-            }
-            else{
-                console.log(error)
-            }
-            },
+        //     else if(error.isAxiosError && error.response.status === undefined){
+        //         console.log('CORS error occured')
+        //     }
+        //     else{
+        //         console.log(error)
+        //     }
+        //     },
         enabled:true
     })
 
@@ -46,10 +46,11 @@ const Home_Latest_Jobs = () => {
     if (isLoading){
         return <Loader/>
     }
-
-    if (  isError) {
-        return <ErrorHandler/>
-    }
+    if (isError && error) {
+        {console.log(error)}
+        return <div> Error:{error.message}</div>
+      }
+    
     const queryFixer = (param, target, id) => {
         return (`${param}?.data[${id}].attributes.${target}`)
     }
