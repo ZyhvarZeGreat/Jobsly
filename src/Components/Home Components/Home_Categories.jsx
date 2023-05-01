@@ -35,27 +35,27 @@ const Home_Categories = () => {
 
   return (
     <Grid xs={11.5} gap='3rem' direction='column' container className='Jobsly_Home_Categories'>
-      <Stack direction='row' className='Jobsly_Home_Categories_Header' alignItems='center' justifyContent='space-between' width='100%'>
+      <Stack direction='row' className='Jobsly_Home_Categories_Header' alignItems='center' justifyContent={ query ? 'space-between':'center'} width='100%'>
         <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
           Explore by <span style={{ color: 'var(--hero-stat-color' }}>category</span>
         </Typography>
 
-        <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
+       {query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
           <Typography fontWeight='600' fontFamily={bodyFont} variant='subtitle1'>
             Show all jobs
           </Typography>
           <UilArrowRight />
-        </Link>
+        </Link>}
       </Stack>
 
 
-      <Grid xs={12} container alignItems='center' justifyContent={'center'}rowGap='1rem'>
+      <Grid xs={12} md={11.5} container alignItems='center' justifyContent={'center'}rowGap='1rem'>
         {data?.data?.map((category) => {
           const { attributes } = category
           const { Category_Name, jobs,icon } = attributes
           return (
        <>
-       { isLoading ? <Loader/>:<Home_Category_Card loading={isLoading} query={query} catIcon={icon?.data?.attributes.url} icon={<UilArrowRight />} headerFont={headerFont} bodyFont={bodyFont} categoryName={Category_Name} jobCount={jobs?.data?.length}/>}
+       { isLoading ? <Loader/>:<Home_Category_Card loading={isLoading} query={query} catIcon={icon?.data?.attributes.url} icon={<UilArrowRight />} headerFont={headerFont} bodyFont={bodyFont} categoryName={Category_Name} jobCount={jobs?.data.length}/>}
        </>
           )
         })}

@@ -32,20 +32,20 @@ const Home_Featured_Jobs = () => {
   }
 
   return (
-    <Grid xs={12} md={11.5} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
-      <Stack width='100%' direction='row' gap='2rem' alignItems='center' justifyContent='space-between' >
+    <Grid xs={11.5} md={11} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
+      <Stack width='100%' direction='row' gap='2rem' alignItems='center' justifyContent={ query ? 'space-between':'center'} >
         <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
           Featured  <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
         </Typography>
-        <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
+      {query &&  <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
           <Typography fontWeight='600' fontFamily={bodyFont} variant='subtitle1'>
             Show all jobs
           </Typography>
           <UilArrowRight />
-        </Link>
+        </Link>}
       </Stack>
 
-      <Grid xs={12}  container alignItems='flex-start' rowGap='3rem' justifyContent='space-between'>
+      <Grid xs={11.5}  container alignItems='flex-start' rowGap='3rem' justifyContent='space-between'>
         {data.data.map((data) => {
           const { id, attributes } = data
           const { Job_Title, Job_Description, employment, categories, company, location } = attributes
