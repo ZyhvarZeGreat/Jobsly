@@ -82,7 +82,7 @@ const Home_Featured_Jobs = () => {
                         {jobLocation}
                       </Typography>
                     </Stack>
-                    <Typography color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontWeight='500' variant='subtitle1'> {Job_Description.substring(0, 83)}... </Typography>
+                    <Typography color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontWeight='500' variant='subtitle1'> {Job_Description?.substring(0, 83)}... </Typography>
 
                   </Stack>
 

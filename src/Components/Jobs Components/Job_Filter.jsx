@@ -83,7 +83,7 @@ const Job_Filter = ({ setCategoryFilter, categoryFilter ,setEmploymentFilter, em
             return (
               <FormGroup key={data.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
                 <Stack sx={{ fontFamily: `${bodyFont}` }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
-                  <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data.attributes.Category_Name} />} label={[data.attributes.Category_Name, ` (${data.attributes.jobs.data.length})`]} />
+                  <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data?.attributes?.Category_Name} />} label={[data.attributes.Category_Name, ` (${data.attributes.jobs.data.length})`]} />
                 </Stack>
               </FormGroup>
             )
@@ -97,9 +97,9 @@ const Job_Filter = ({ setCategoryFilter, categoryFilter ,setEmploymentFilter, em
           {employments?.data?.map((data) => {
 
             return (
-              <FormGroup key={data.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+              <FormGroup key={data?.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
                 <Stack sx={{ fontFamily: `${bodyFont}` }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
-                  <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleEmploymentChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data.attributes.employment} />} label={[data.attributes.employment, ` (${data.attributes.jobs.data.length})`]} />
+                  <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleEmploymentChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data?.attributes?.employment} />} label={[data.attributes.employment, ` (${data.attributes.jobs.data.length})`]} />
                 </Stack>
               </FormGroup>
             )
@@ -117,7 +117,7 @@ const Job_Filter = ({ setCategoryFilter, categoryFilter ,setEmploymentFilter, em
             return (
               <FormGroup key={data.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
                 <Stack sx={{ fontFamily: `${bodyFont}` }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
-                  <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleLevelChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data.attributes.level} />} label={[data.attributes.level, ` (${data.attributes.jobs.data.length})`]} />
+                  <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleLevelChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data?.attributes?.level} />} label={[data.attributes.level, ` (${data.attributes.jobs.data.length})`]} />
                 </Stack>
               </FormGroup>
             )

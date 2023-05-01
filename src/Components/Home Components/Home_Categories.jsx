@@ -55,7 +55,7 @@ const Home_Categories = () => {
           const { Category_Name, jobs,icon } = attributes
           return (
        <>
-       { isLoading ? <Loader/>:<Home_Category_Card loading={isLoading} query={query} catIcon={icon?.data?.attributes.url} icon={<UilArrowRight />} headerFont={headerFont} bodyFont={bodyFont} categoryName={Category_Name} jobCount={jobs.data.length}/>}
+       { isLoading ? <Loader/>:<Home_Category_Card loading={isLoading} query={query} catIcon={icon?.data?.attributes.url} icon={<UilArrowRight />} headerFont={headerFont} bodyFont={bodyFont} categoryName={Category_Name} jobCount={jobs?.data?.length}/>}
        </>
           )
         })}
