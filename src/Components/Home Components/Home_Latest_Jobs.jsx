@@ -39,16 +39,16 @@ const Home_Latest_Jobs = () => {
 
     return (
         <Grid xs={12} sm={12} md={11.5} lg={11.5} direction='column' gap='2rem' container className='Jobsly_Home_Latest_Jobs'>
-            <Stack width='100%' direction='row' alignItems='center' justifyContent='space-between' >
+            <Stack width='95%'  direction='row' alignItems='center' justifyContent={query ? 'space-between':'center'} >
                 <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
                     Latest   <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
                 </Typography>
-                <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
+             { query &&   <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
                     <Typography fontWeight='600' fontFamily={bodyFont} variant='subtitle1'>
                         Show all jobs
                     </Typography>
                     <UilArrowRight />
-                </Link>
+                </Link>}
             </Stack>
 
 
@@ -63,8 +63,8 @@ const Home_Latest_Jobs = () => {
                         const imgUrl = company.data?.attributes.Company_Logo.data.attributes.url 
 
                         return (
-                            <Grid key={Job_Title} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }} item xs={12} sm={6} md={5.7}>
-                                {isError && ErrorHandler}
+                            <Grid key={Job_Title} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }} item xs={12} sm={6} md={5.9}>
+                                {isError && <ErrorHandler/>}
                                 {isLoading ? <Skeleton width='100%' height='20rem'></Skeleton> :
                                     <Stack height={query ? '13rem':'15rem' }width='100%' alignItems={query ? 'flex-start':'center'}>
                                         <Stack alignItems={ query ? 'flex-end':'center'} gap={query ? '':'1rem'} direction={query  ? 'row':'column'} border='1px solid #e5e5e5' justifyContent='center' height='100%' width={query ? '90%':'95%'} >
@@ -98,6 +98,15 @@ const Home_Latest_Jobs = () => {
                     })
                 }
             </Grid>
+
+            {
+               !query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
+                   <Typography fontWeight='600' fontSize={'1.3rem'} fontFamily={bodyFont} variant='subtitle1'>
+                       Show all jobs
+                   </Typography>
+                   <UilArrowRight />
+               </Link>
+            }
         </Grid>
     )
 }
