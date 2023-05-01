@@ -10,7 +10,7 @@ const Recommended_Companies_Card = ({ Company_Name, jobs, Company_Description, c
                 <Stack width='90%' height='95%' justifyContent='center'>
                     <Stack direction='row' height='25%' alignItems='flex-end' justifyContent='space-between'>
                         <Box width='8rem' height='3rem' display='flex' alignItems='center' justifyContent='flex-start' className='Jobsly_Recommended_Companies_Image_Container'>
-                            <img className='Jobsly_Recommended_Companies_Image' src={`http://localhost:1337${imgUrl}`} alt='' />
+                            <img className='Jobsly_Recommended_Companies_Image' src={`${import.meta.env.VITE_BASE_URL}${imgUrl}`} alt='' />
                         </Box>
                         <Box height='2rem' borderRadius='20px' backgroundColor='var(--crypto-text-color)' color='var(--secondary-color)' display='flex' alignItems='center' justifyContent='center' width='5rem' >
                             <Typography variant='body1' fontFamily={bodyFont} component='p'>
