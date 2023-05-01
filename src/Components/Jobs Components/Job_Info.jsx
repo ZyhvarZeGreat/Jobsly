@@ -38,7 +38,7 @@ const Job_Info = () => {
 
 
   async function fetchAllJobs() {
-    const { data } = await axios.get(`${baseUrl}jobs?fields=job_title,capacity,Salary&populate=company,employment,level,categories,location&populate[0]=company&populate[1]=company.Company_Logo&pagination[pageSize]=36`)
+    const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/jobs?fields=job_title,capacity,Salary&populate=company,employment,level,categories,location&populate[0]=company&populate[1]=company.Company_Logo&pagination[pageSize]=36`)
     return data
   }
 

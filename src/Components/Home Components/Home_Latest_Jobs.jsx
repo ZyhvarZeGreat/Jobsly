@@ -46,8 +46,8 @@ const Home_Latest_Jobs = () => {
     if (isLoading){
         return <Loader/>
     }
-    if (isError && error.response===undefined) {
-        {console.log(error)}
+    if  (isError) {
+        console.log(error)
         return <ErrorHandler message={error.message}/>
       }
     
@@ -92,7 +92,7 @@ const Home_Latest_Jobs = () => {
                                             <Stack alignSelf={'flex-start'} width='30%' height={query ? '85%':'40%'} alignItems='center' justifyContent='center'>
                                                 <Stack alignItems='center' width='90%' height={query ? '50%':"30%"}>
                                                     <Box display='flex' alignItems='center' justifyContent='center' height='3rem' width='6rem' >
-                                                        <img className='card_img' src={`http://localhost:1337${imgUrl}`} alt='' />
+                                                        <img className='card_img' src={`${import.meta.env.VITE_BASE_URL}${imgUrl}`} alt='' />
                                                     </Box>
                                                 </Stack>
                                             </Stack>

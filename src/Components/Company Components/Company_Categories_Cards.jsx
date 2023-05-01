@@ -7,6 +7,7 @@ import Loader from '../../Reusables/Loader'
 import axios from 'axios'
 import qs from 'qs'
 import { Link } from 'react-router-dom'
+import ErrorHandler from '../../Reusables/ErrorHandler'
 
 // FROM THE UI DESIGN I SEE THE DATA I NEED IS THE AMOUNT AND INFO  OF COMPANIES THAT BELONG TO THE CATEGORY OF THE CLICKED TAB
 // WHAT CAN I DO TO GET THE DATA?
@@ -17,34 +18,34 @@ const Company_Categories_Card = ({ filter }) => {
     const filterParam = `&[filters][Category_Name][$eq]=${filter}`
 
     const fetchCardData = async () => {
-        const { data } = await axios.get(`${baseUrl}categories?populate[0]=company&populate[1]=company.Company_Logo,company.jobs${filter === '' ? '' : filterParam}`)
+        const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/categories?populate[0]=company&populate[1]=company.Company_Logo,company.jobs${filter === '' ? '' : filterParam}`)
         return data
     }
 
     const cardData = useQuery({
         queryFn: fetchCardData,
         queryKey: [`${filter}`],
-        onError:(error) => {
-            if(error.response.status === 401){
-                console.log('You are not Authorized')
-            }
-            else if(error.response.status === 403){
-                console.log('You are Forbidden')
-            }
-            else if(error.response.status === 404){
-                console.log('Item not found')
-            }
-            else if(error.response.status === 500){
-                console.log('Internal Server Error')
-            }
+        // onError:(error) => {
+        //     if(error.response.status === 401){
+        //         console.log('You are not Authorized')
+        //     }
+        //     else if(error.response.status === 403){
+        //         console.log('You are Forbidden')
+        //     }
+        //     else if(error.response.status === 404){
+        //         console.log('Item not found')
+        //     }
+        //     else if(error.response.status === 500){
+        //         console.log('Internal Server Error')
+        //     }
             
-            else if(error.isAxiosError && error.response.status === undefined){
-                console.log('CORS error occured')
-            }
-            else{
-                console.log(error)
-            }
-            }
+        //     else if(error.isAxiosError && error.response.status === undefined){
+        //         console.log('CORS error occured')
+        //     }
+        //     else{
+        //         console.log(error)
+        //     }
+        //     }
     })
 
 
@@ -54,12 +55,12 @@ const Company_Categories_Card = ({ filter }) => {
     // console.log(filter === '' ? filterParam : '')
     // console.log(filterParam)
 
-    const { data, isLoading, isError } = cardData
+    const { data, isLoading, isError,error } = cardData
     if (isLoading) {
         return <Loader />
     }
     if (isError) {
-        return <div>Error...</div>
+        return <ErrorHandler message={error.message}/>
     }
 
    

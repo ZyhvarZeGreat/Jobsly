@@ -13,7 +13,7 @@ const Job_Info_Card = ({ logo, title, company, location, employment, category, v
         <Stack width={viewChange ? '90%' : '100%'} gap='1rem' alignItems={viewChange ? 'flex-start' : 'center'} justifyContent='center' direction={viewChange ? 'column' : 'row'}>
           <Stack width={viewChange ? '100%' : '30%'} height='55%' alignItems={viewChange ? 'flex-start' : 'center'} justifyContent={viewChange ? 'center' : 'flex-start'}>
             <Box alignItems='center' display='flex' justifyContent={viewChange ? 'flex-start' : 'center'} className={viewChange ? 'card_img_container' : 'list_card_img_container'}>
-              <img className={'card_img'} src={`http://localhost:1337${logo}`} alt='' />
+              <img className={'card_img'} src={`${import.meta.env.VITE_BASE_URL}${logo}`} alt='' />
             </Box>
           </Stack>
           <Stack width={viewChange ? '100%' : '70%'} height='90%' justifyContent='center' direction='column' gap='.8rem' >

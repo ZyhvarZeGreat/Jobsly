@@ -47,8 +47,8 @@ const Home_Featured_Jobs = () => {
     return <Loader/>
   }
 
-  if (isError && error.response===undefined) {
-    console.log(status)
+  if (isError) {
+    console.log(error)
     return <ErrorHandler message={error.message}/>
   }
 
@@ -83,7 +83,7 @@ const Home_Featured_Jobs = () => {
                 <Stack height='90%' alignItems='center' justifyContent='space-around' width='95%' className='Jobsly_Featured_Jobs_Container'>
                   <Stack width='90%' direction='row' alignItems='center' justifyContent='space-between' >
                     <Box className='card_img_container'>
-                      <img className='card_img' src={`${baseUrl}${imgUrl}`} alt='' />
+                      <img className='card_img' src={`${import.meta.env.VITE_BASE_URL}${imgUrl}`} alt='' />
                     </Box>
                     <Box border='1px solid var(--secondary-color)' display='flex' alignItems='center' justifyContent='center' height='2.2rem' width='6rem'>
                       <Typography fontFamily={bodyFont} variant='subtitle2' color='var(--secondary-color)'>
@@ -103,7 +103,7 @@ const Home_Featured_Jobs = () => {
                         {jobLocation}
                       </Typography>
                     </Stack>
-                    <Typography color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontWeight='500' variant='subtitle1'> {Job_Description?.substring(0, 83)}... </Typography>
+                    <Typography color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontWeight='500' variant='subtitle1'> {Job_Description.substring(0, 83)}... </Typography>
 
                   </Stack>
 

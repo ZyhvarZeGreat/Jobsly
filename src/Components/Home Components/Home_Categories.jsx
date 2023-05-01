@@ -45,7 +45,8 @@ const Home_Categories = () => {
   if (isLoading) {
     return <Loader/>
   }
-  if (isError && error) {
+  if (isError) {
+    console.log(error)
     return <ErrorHandler message={error.message}/>
   }
 

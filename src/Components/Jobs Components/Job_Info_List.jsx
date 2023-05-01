@@ -15,7 +15,7 @@ const Job_Info_List = (props) => {
     const viewChange = viewState < 12
     
     async function fetchAllJobs() {
-        const { data } = await axios.get(`${baseUrl}jobs?fields=job_title,capacity&populate=company,employment,level,categories,location&populate[0]=company&populate[1]=company.Company_Logo&sort[0]=${sortValue}:${sortOrder}&pagination[limit]=9&pagination[withCount]=true&pagination[start]=${(currentPage - 1) * 10}${categoryQuery}${levelQuery}${employmentQuery}`)
+        const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/jobs?fields=job_title,capacity&populate=company,employment,level,categories,location&populate[0]=company&populate[1]=company.Company_Logo&sort[0]=${sortValue}:${sortOrder}&pagination[limit]=9&pagination[withCount]=true&pagination[start]=${(currentPage - 1) * 10}${categoryQuery}${levelQuery}${employmentQuery}`)
         return data
 
     }
