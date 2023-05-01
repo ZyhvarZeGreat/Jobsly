@@ -38,7 +38,7 @@ const Home_Latest_Jobs = () => {
     console.log(data)
 
     return (
-        <Grid xs={12} sm={12} md={11.5} lg={11.5} direction='column' gap='2rem' container className='Jobsly_Home_Latest_Jobs'>
+        <Grid xs={12} sm={12} md={11.5} lg={11.5} direction='column' marginBottom={'3rem'} gap='2rem' container className='Jobsly_Home_Latest_Jobs'>
             <Stack width='95%'  direction='row' alignItems='center' justifyContent={query ? 'space-between':'center'} >
                 <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
                     Latest   <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
