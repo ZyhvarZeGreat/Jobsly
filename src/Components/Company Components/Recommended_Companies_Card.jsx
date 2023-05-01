@@ -14,7 +14,7 @@ const Recommended_Companies_Card = ({ Company_Name, jobs, Company_Description, c
                         </Box>
                         <Box height='2rem' borderRadius='20px' backgroundColor='var(--crypto-text-color)' color='var(--secondary-color)' display='flex' alignItems='center' justifyContent='center' width='5rem' >
                             <Typography variant='body1' fontFamily={bodyFont} component='p'>
-                                {jobs.data.length} {jobs.data.length > 1 || jobs.data.length === 0 ? 'jobs' : 'job'}
+                                {jobs.data.length} {jobs?.data?.length > 1 || jobs?.data?.length === 0 ? 'jobs' : 'job'}
                             </Typography>
                         </Box>
                     </Stack>
@@ -26,13 +26,13 @@ const Recommended_Companies_Card = ({ Company_Name, jobs, Company_Description, c
                         </Typography>
 
                         <Typography variant='body1' fontFamily={bodyFont} component='p'>
-                            {Company_Description.substring(0, 151)}...
+                            {Company_Description?.substring(0, 151)}...
                         </Typography>
                     </Stack>
 
-                    <Stack alignItems='center' justifyContent='center' width='8rem' height='2.1rem' borderRadius='20px' className={`${categories.data[0].attributes.Category_Name}`}>
+                    <Stack alignItems='center' justifyContent='center' width='8rem' height='2.1rem' borderRadius='20px' className={`${categories?.data[0]?.attributes?.Category_Name}`}>
                         <Typography fontFamily={bodyFont} variant='body1' component='p'>
-                            {categories.data[0].attributes.Category_Name}
+                            {categories?.data[0]?.attributes?.Category_Name}
                         </Typography>
                     </Stack>
 

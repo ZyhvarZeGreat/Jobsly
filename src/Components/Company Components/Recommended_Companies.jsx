@@ -7,34 +7,14 @@ import './Recommended_Jobs.css'
 import Recommended_Companies_Card from './Recommended_Companies_Card'
 import { baseUrl,subHeadingFontSize } from '../../Reusables/constants'
 import Loader from '../../Reusables/Loader'
+import ErrorHandler from '../../Reusables/ErrorHandler'
 const Recommended_Companies = () => {
 
     const theme = useTheme()
     const query = useMediaQuery(theme.breakpoints.up('md'))
-    const { data, isError, isLoading } = useQuery({
+    const { data, isError, isLoading, error } = useQuery({
         queryKey: ['companies'],
         queryFn: fetchCompanies,
-        onError:(error) => {
-            if(error.response.status === 401){
-                console.log('You are not Authorized')
-            }
-            else if(error.response.status === 403){
-                console.log('You are Forbidden')
-            }
-            else if(error.response.status === 404){
-                console.log('Item not found')
-            }
-            else if(error.response.status === 500){
-                console.log('Internal Server Error')
-            }
-            
-            else if(error.isAxiosError && error.response.status === undefined){
-                console.log('CORS error occured')
-            }
-            else{
-                console.log(error)
-            }
-            }
     })
 
     if (isLoading) {
@@ -42,7 +22,7 @@ const Recommended_Companies = () => {
     }
 
     if (isError) {
-        return <div>Error</div>
+        return <ErrorHandler message={error.message}/>
     }
     return (
         <Grid xs={11} container >
