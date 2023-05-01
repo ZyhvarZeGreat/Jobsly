@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Stack, Box, Typography, useTheme, useMediaQuery, CircularProgress, Skeleton } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
 import {UilArrowRight} from '@iconscout/react-unicons'
-import { baseUrl, bodyFont, headerFont, subHeadingFontSize } from '../../Reusables/constants'
+import { axiosBaseUrl,baseUrl, bodyFont, headerFont, subHeadingFontSize } from '../../Reusables/constants'
 import Loader from '../../Reusables/Loader'
 import axios from 'axios'
 import qs from 'qs'
@@ -18,7 +18,7 @@ const Company_Categories_Card = ({ filter }) => {
     const filterParam = `&[filters][Category_Name][$eq]=${filter}`
 
     const fetchCardData = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/categories?populate[0]=company&populate[1]=company.Company_Logo,company.jobs${filter === '' ? '' : filterParam}`)
+        const { data } = await axiosBaseUrl.get(`/api/categories?populate[0]=company&populate[1]=company.Company_Logo,company.jobs${filter === '' ? '' : filterParam}`)
         return data
     }
 

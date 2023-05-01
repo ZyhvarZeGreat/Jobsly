@@ -10,7 +10,4 @@ export const axiosBaseUrl = axios.create({
 baseURL: baseUrl,
 headers:{
     Authorization: import.meta.env.VITE_STRAPI_API_KEY
-}
-
-
-})
+}})

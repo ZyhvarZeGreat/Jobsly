@@ -1,9 +1,10 @@
 import React, { useState, useRef, useCallback,useEffect } from 'react'
 import { Grid, Stack, Box, Typography, useTheme, useMediaQuery } from '@mui/material'
 import { useQuery } from '@tanstack/react-query'
-import { baseUrl, bodyFont, headerFont, subHeadingFontSize } from '../../Reusables/constants'
+import {  axiosBaseUrl,baseUrl, bodyFont, headerFont, subHeadingFontSize } from '../../Reusables/constants'
 import Loader from '../../Reusables/Loader'
 import axios from 'axios'
+
 import qs from 'qs'
 import Company_Categories_Card from './Company_Categories_Cards'
 import './Company_Categories.css'
@@ -14,7 +15,7 @@ const Company_Categories = () => {
     const [companyFilter, setCompanyFilter] = useState('')
     const textRef = useRef(null)
     const fetchCategories = async () => {
-        const data = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/categories?fields=Category_Name`)
+        const data = await axiosBaseUrl.get(`/api/categories?fields=Category_Name`)
         return data
     }
 

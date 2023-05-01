@@ -49,7 +49,7 @@ const Home_Categories = () => {
       </Stack>
 
 
-      <Grid xs={12} md={11.5} container alignItems='center' justifyContent={'center'} rowGap='1rem'>
+      <Grid xs={12} md={11.7} container alignItems='center' justifyContent={'space-between'} rowGap='2rem' >
         {data?.data?.map((category) => {
           const { attributes } = category
           const { Category_Name, jobs, icon } = attributes
@@ -61,8 +61,7 @@ const Home_Categories = () => {
         })}
       </Grid>
 
-      {
-        !query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
+      {  !query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
           <Typography fontWeight='600' fontSize={'1.3rem'} fontFamily={bodyFont} variant='subtitle1'>
             Show all jobs
           </Typography>
