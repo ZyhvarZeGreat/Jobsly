@@ -32,7 +32,7 @@ const Home_Featured_Jobs = () => {
   }
 
   return (
-    <Grid xs={11.5} md={11} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
+    <Grid xs={11.5} md={11.5} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
       <Stack width='95%' direction='row' gap='2rem' alignItems='center' justifyContent={ query ? 'space-between':'center'} >
         <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
           Featured  <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
@@ -99,7 +99,7 @@ const Home_Featured_Jobs = () => {
           )
         })}
       </Grid>
-      
+
       {
                !query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
                    <Typography fontWeight='600' fontSize={'1.3rem'} fontFamily={bodyFont} variant='subtitle1'>
