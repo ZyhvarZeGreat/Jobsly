@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Stack, Box, useTheme, useMediaQuery, Typography } from '@mui/material'
 import { Search_Form } from '../index'
 import { bodyFont,headerFont } from '../constants'
-import hero from '../../assets/hero3.png'
+import hero from '../../assets/hero.png'
 import './Hero.css'
 const Hero = () => {
     const theme = useTheme()
