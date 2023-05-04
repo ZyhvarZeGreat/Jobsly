@@ -1,5 +1,5 @@
 import axios from "axios"
-export const headerFont = 'Clash Display Semibold,sans-serif'
+export const headerFont = 'Clash Display ,sans-serif'
 export const bodyFont = 'Gilroy-Regular,sans-serif'
 export const subHeadingFontSize = 'clamp(1.8rem,5vw,2.3rem)'
 export const heroFontSize = 'clamp(3rem,5vw,4rem)'
