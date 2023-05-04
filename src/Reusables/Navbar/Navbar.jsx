@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Mobile_nav from "./Mobile_nav";
-import { bodyFont } from "../constants";
+import { bodyFont,headerFont } from "../constants";
 import {
   Grid,
   Box,
@@ -16,7 +16,6 @@ const Navbar = () => {
   const theme = useTheme();
   const query = useMediaQuery(theme.breakpoints.up("lg"));
   const [opened, setOpened] = useState(false)
-  const headerFont = "Clash Grotesk Medium,sans-serif";
   const centerStyle = {
     display: "flex",
     flexDirection: "row",
@@ -55,6 +54,7 @@ const Navbar = () => {
                 color="var(--secondary-color)"
                 variant="h3"
                 fontFamily={headerFont}
+                fontWeight={600}
                 component="h4"
                 style={{ zIndex: 15 }}
               >

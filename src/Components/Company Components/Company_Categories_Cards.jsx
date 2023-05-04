@@ -47,7 +47,7 @@ const Company_Categories_Card = ({ filter }) => {
     return (
         <Grid container xs={12} gap='3rem' alignItems='center' justifyContent='center' className='Jobsly_Company_Categories_Card_Container'>
             <Stack width='100%' alignItems='flex-start' justifyContent='flex-start'>
-                <Typography variant='h4' component='h4' fontSize={subHeadingFontSize} fontFamily={headerFont} fontWeight={500} >
+                <Typography variant='h4' component='h4' fontSize={subHeadingFontSize} fontFamily={headerFont} fontWeight={600} >
                     {resultCount > 0 ? resultCount : '0'} {resultCount === 0 && resultCount > 0 ? 'Result' : 'Results'}
                 </Typography>
             </Stack>
@@ -60,9 +60,9 @@ const Company_Categories_Card = ({ filter }) => {
                             <Grid xs={12} md={5.7} lg={3.7} gap='2rem' border='1px solid #e5e5e5' container alignItems='center' justifyContent='center' height='15rem' className='Jobsly_Company_Categories_Card_Item_Container'>
                                 {isLoading ? <CircularProgress /> : <Stack alignItems='center' gap='1rem' justifyContent='center' height='90%' width='90%'>
                                     <Box height='4rem' width='9rem'>
-                                        <img style={{ width: '100%', height: '100%' }} src={`http://localhost:1337${data?.attributes?.Company_Logo?.data?.attributes?.url}`} />
+                                        <img style={{ width: '100%', height: '100%' }} src={`${baseUrl}${data?.attributes?.Company_Logo?.data?.attributes?.url}`} />
                                     </Box>
-                                    <Typography variant='h4' component='h4' fontSize='1.8rem' fontFamily={headerFont} fontWeight={400} >
+                                    <Typography variant='h4' component='h4' fontSize='1.8rem' fontFamily={headerFont} fontWeight={500} >
                                         {data?.attributes?.Company_Name}
                                     </Typography>
 

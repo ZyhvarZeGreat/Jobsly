@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, Stack, Box, Typography } from '@mui/material'
+import { headerFont } from '../../Reusables/constants'
 const Recommended_Companies_Card = ({ Company_Name, jobs, Company_Description, categories, bodyFont,imgUrl }) => {
 
     return (
@@ -21,7 +22,7 @@ const Recommended_Companies_Card = ({ Company_Name, jobs, Company_Description, c
 
 
                     <Stack direction='column' height='75%' gap='.3rem' alignItems='flex-start' justifyContent='center'>
-                        <Typography variant='h4' fontFamily={'Clash Display Medium'} component='h4'>
+                        <Typography variant='h4' fontFamily={headerFont} fontWeight={500} component='h4'>
                             {Company_Name}
                         </Typography>
 

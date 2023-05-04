@@ -46,7 +46,7 @@ const Company_Categories = () => {
     return (
         <Grid xs={11} container alignItems='center' justifyContent='center'>
             <Grid xs={12} container gap='2rem' alignItems='center' className='Jobsly_Company_Categories_Header' justifyContent='flex-start'>
-                <Typography fontSize={subHeadingFontSize} variant='h3' component='h3' fontFamily={headerFont}>
+                <Typography fontSize={subHeadingFontSize} variant='h3' component='h3' fontFamily={headerFont} fontWeight={600}>
                     Companies by Category
                 </Typography>
 
@@ -57,7 +57,7 @@ const Company_Categories = () => {
                                 <Stack key={data.id} onClick={() => handleClick(data)} alignItems='center' justifyContent='center' className='Jobsly_Company_Categories_Item' width='21rem' height='14rem'>
                                     <Stack justifyContent='center' direction='column' gap='2rem' height='90%' width='90%' >
                                         icon
-                                        <Typography ref={textRef} variant='h4' component='h4' fontFamily={headerFont}>
+                                        <Typography ref={textRef} variant='h4' component='h4' fontFamily={headerFont} fontWeight={500}>
                                             {data.attributes.Category_Name}
                                         </Typography>
                                     </Stack>

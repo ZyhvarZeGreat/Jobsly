@@ -2,16 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Grid, Stack, Box, useTheme, useMediaQuery, Typography, Skeleton } from '@mui/material'
 import fetchLatestJobs from '../../Services/fetchLatestJobs'
 import { useQuery } from '@tanstack/react-query'
-import { baseUrl, headerFont, bodyFont } from '../../Reusables/constants'
+import { headerFont, bodyFont } from '../../Reusables/constants'
 import { Link } from 'react-router-dom'
 import Loader from '../../Reusables/Loader'
 import { UilArrowRight } from '@iconscout/react-unicons'
 import ErrorHandler from '../../Reusables/ErrorHandler'
 import './Home_Latest_Jobs.css'
 const Home_Latest_Jobs = () => {
-    const headerFont = 'Clash Display Semibold,sans-serif'
-    const bodyFont = 'Gilroy,sans-serif'
-    
+
     const { data, error, isError, isLoading } = useQuery({
         queryKey: ['jobs', 1],
         queryFn: fetchLatestJobs,
@@ -40,7 +38,7 @@ const Home_Latest_Jobs = () => {
     return (
         <Grid xs={12} sm={12} md={11.5} lg={11.5} direction='column' marginBottom={'3rem'} gap='2rem' container className='Jobsly_Home_Latest_Jobs'>
             <Stack width='95%'  direction='row' alignItems='center' justifyContent={query ? 'space-between':'center'} >
-                <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
+                <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} fontWeight={600} >
                     Latest   <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
                 </Typography>
              { query &&   <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>

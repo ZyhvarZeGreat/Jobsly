@@ -81,7 +81,7 @@ const Job_Info = () => {
     return <Loader/>
   }
   if (isError) {
-    return <ErrorHandler />
+    return <ErrorHandler messge={error.message} />
   }
 
   // console.log(data.meta.pagination.total)
@@ -90,7 +90,7 @@ const Job_Info = () => {
     <Grid marginBottom='3rem' marginTop={query ? '' : '2rem'} xs={12} container justifyContent='space-between' className='Jobsly_Jobs_Info_Container'>
       <Stack gap='.4rem' height='8rem' alignItems='center' className='Jobsly_Job_Info_Header' width='100%' justifyContent='space-between' direction={query ? 'row' : 'column'}>
         <Stack direction={query ? 'column' : 'row'} alignItems={query ? '' : 'center'} gap={query ? '' : '2rem'} >
-          <Typography fontFamily={headerFont} fontWeight='500' fontSize={query ? 'var(--text-3xl)' : ''} variant='h3' component='h4'>
+          <Typography fontFamily={headerFont} fontWeight='600' fontSize={query ? 'var(--text-3xl)' : ''} variant='h3' component='h4'>
             All Jobs
           </Typography>
 

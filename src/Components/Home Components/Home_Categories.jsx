@@ -6,11 +6,11 @@ import { useQuery } from '@tanstack/react-query'
 import Loader from '../../Reusables/Loader'
 import fetchCategories from '../../Services/fetchCategories'
 import Home_Category_Card from './Home_Category_Card'
+import{bodyFont,headerFont} from '../../Reusables/constants'
 import './Home_Categories.css'
 import ErrorHandler from '../../Reusables/ErrorHandler'
 const Home_Categories = () => {
-  const headerFont = 'Clash Display Semibold,sans-serif'
-  const bodyFont = 'Gilroy,sans-serif'
+
 
   const categoryQuery = useQuery({
     queryKey: ['categories'],
@@ -36,7 +36,7 @@ const Home_Categories = () => {
   return (
     <Grid xs={11.5} gap='3rem' direction='column' container className='Jobsly_Home_Categories'>
       <Stack direction='row' className='Jobsly_Home_Categories_Header' alignItems='center' justifyContent={query ? 'space-between' : 'center'} width='95%' >
-        <Typography variant={query ? 'h3' : 'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
+        <Typography variant={query ? 'h3' : 'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} fontWeight={600} >
           Explore by <span style={{ color: 'var(--hero-stat-color' }}>category</span>
         </Typography>
 

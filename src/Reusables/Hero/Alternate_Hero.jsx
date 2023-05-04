@@ -12,7 +12,7 @@ const Alternate_Hero = (props) => {
                 <Stack  gap='3rem' minHeight='25rem'  width='100%' direction='column' alignItems='center' justifyContent='center' className='Jobsly_Hero_Details'>
     
                     <Box display='flex' flexDirection='column' width='100%' alignItems='center' className='Jobsly_Hero_Details_Text'>
-                        <Typography textAlign={'center'} fontFamily={headerFont} className='Jobsly_Hero_Details_Header' variant='h2' fontSize={heroFontSize} component='h1'>
+                        <Typography textAlign={'center'} fontFamily={headerFont} fontWeight={600} className='Jobsly_Hero_Details_Header' variant='h2' fontSize={heroFontSize} component='h1'>
                         {header} <span className='Jobsly_Hero_Details_Span'>{span}</span>
                         </Typography>
                   
@@ -23,7 +23,7 @@ const Alternate_Hero = (props) => {
     
                     <Box width='100%' textAlign='start' className='Jobsly_Hero_Details_Search_Form_Container' display='flex' gap='2rem' flexDirection='column' alignItems='flex-start' justifyContent='center'>
                         <Search_Form widthMax='100%' widthMin='100%' />
-                        <p style={{fontSize:'clamp(var(--text-lg),5vw,var(--text-sm))'}}>Popular: UI Designer,UX Researcher,IOS Developer,Devops</p>
+                        <Typography  fontFamily={bodyFont}  style={{fontSize:'clamp(var(--text-lg),5vw,var(--text-sm))'}}>Popular: UI Designer,UX Researcher,IOS Developer,Devops</Typography>
                     </Box>
                 </Stack>
     

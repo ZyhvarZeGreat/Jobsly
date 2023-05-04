@@ -62,7 +62,7 @@ const Footer = () => {
             <Grid xs={12} md={3} container alignItems='flex-start' >
 
               <Stack alignItems='flex-start' justifyContent='center' width='100%' height={query ? '50%' : '100%'}>
-                <Typography color='var(--secondary-color)' fontFamily={headerFont} variant='h3' component='h3' >
+                <Typography color='var(--secondary-color)' fontFamily={headerFont} fontWeight={600} variant='h3' component='h3' >
                   Jobsly
                 </Typography>
 

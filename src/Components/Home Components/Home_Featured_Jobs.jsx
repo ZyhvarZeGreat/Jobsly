@@ -6,12 +6,10 @@ import { useQuery } from '@tanstack/react-query'
 import Loader from '../../Reusables/Loader'
 import { Grid, Stack, Box, useTheme, useMediaQuery, Typography, Skeleton } from '@mui/material'
 import './Home_Featured_Jobs.css'
+import{bodyFont,headerFont} from '../../Reusables/constants'
 import ErrorHandler from '../../Reusables/ErrorHandler'
 const Home_Featured_Jobs = () => {
 
-  const headerFont = 'Clash Display Semibold,sans-serif'
-  const bodyFont = 'Gilroy,sans-serif'
-  const baseUrl = 'http://localhost:1337'
   const { status, data, error, isLoading, isError } = useQuery({
     queryKey: ['jobs'],
     queryFn: fetchJobs,
@@ -34,7 +32,7 @@ const Home_Featured_Jobs = () => {
   return (
     <Grid xs={11.5} md={11.5} direction='column' gap='2rem' container className='Jobsly_Featured_Jobs'>
       <Stack width='95%' direction='row' gap='2rem' alignItems='center' justifyContent={ query ? 'space-between':'center'} >
-        <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} >
+        <Typography variant={query ? 'h3':'h4'} className='Jobsly_Home_Categories_Header' fontFamily={headerFont} fontWeight={600} >
           Featured  <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
         </Typography>
       {query &&  <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>

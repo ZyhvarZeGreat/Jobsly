@@ -1,11 +1,11 @@
 import React from 'react'
 import { Grid, Stack, Box, Skeleton, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { fetchCompanies } from '../../Services/fetchCompanies'
-import { bodyFont, headerFont } from '../../Reusables/constants'
+import { bodyFont, headerFont,subHeadingFontSize  } from '../../Reusables/constants'
 import { useQuery } from '@tanstack/react-query'
 import './Recommended_Jobs.css'
 import Recommended_Companies_Card from './Recommended_Companies_Card'
-import { baseUrl,subHeadingFontSize } from '../../Reusables/constants'
+
 import Loader from '../../Reusables/Loader'
 import ErrorHandler from '../../Reusables/ErrorHandler'
 const Recommended_Companies = () => {
@@ -29,7 +29,7 @@ const Recommended_Companies = () => {
             <Grid xs={12} container className='Jobsly_Recommended_Companies_Header'>
 
                 <Stack height={query ? '8rem':'9rem'}>
-                    <Typography fontSize={subHeadingFontSize} fontFamily={headerFont} variant='h3' component='h2'>
+                    <Typography fontSize={subHeadingFontSize} fontWeight={600} fontFamily={headerFont} variant='h3' component='h2'>
                         Recommended Companies
                     </Typography>
                     <Typography fontFamily={bodyFont} variant='body1' component='p'>
