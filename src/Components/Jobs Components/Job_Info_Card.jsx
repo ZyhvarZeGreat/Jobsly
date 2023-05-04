@@ -17,29 +17,29 @@ const Job_Info_Card = ({ logo, title, company, location, employment, category, v
             </Box>
           </Stack>
           <Stack width={viewChange ? '100%' : '70%'} height='90%' justifyContent='center' direction='column' gap='.8rem' >
-            <Typography sx={{ width: `100%` }} fontWeight='600' fontFamily={`${bodyFont}`} fontSize={viewChange ? 'var(--text-xxl) ' : 'var(--text-xxxl)'} variant='h4' component='h4'>
+            <Typography sx={{ width: `100%` }} fontWeight='600' fontFamily={bodyFont} fontSize={viewChange ? 'var(--text-xxl) ' : 'var(--text-xxxl)'} variant='h4' component='h4'>
               {title}
             </Typography>
 
             <Stack color='#e5e5e5' direction='row' gap='.3rem'>
-              <Typography fontFamily={`${bodyFont}`} variant='body1' component='p'>
+              <Typography fontFamily={bodyFont} variant='body1' component='p'>
                 {company}
               </Typography>
 
-              <Typography fontFamily={`${bodyFont}`} fontSize={'var(--text-base)'} color={'#acacac'} variant='body1' component='p'>
+              <Typography fontFamily={bodyFont} fontSize={'var(--text-base)'} color={'#acacac'} variant='body1' component='p'>
                 {location}
               </Typography>
             </Stack>
             <Stack direction='row' alignItems='flex-start' gap='.3rem'>
               <Box display='flex' alignItems='center' justifyContent='center' height='2rem' borderRadius='20px' width='6rem' className={`-${employment}`}>
-                <Typography fontFamily={`${bodyFont}`} variant='body1' component='p'>
+                <Typography fontFamily={bodyFont} variant='body1' component='p'>
                   {employment}
                 </Typography>
               </Box>
               <Divider />
               <Box display='flex' alignItems='center' justifyContent='center' height='2rem' borderRadius='20px' width='8rem' className={`-${category}`}>
 
-                <Typography fontFamily={`${bodyFont}`} variant='body1' component='p'>
+                <Typography fontFamily={bodyFont} variant='body1' component='p'>
                   {category}
                 </Typography>
               </Box>
@@ -53,7 +53,7 @@ const Job_Info_Card = ({ logo, title, company, location, employment, category, v
 
       <Grid md={viewChange ? 12 : 6}  container justifyContent={viewChange ? 'center' : 'flex-end'}>
         <Stack marginRight={ viewChange ? '0':'2rem'} height='100%' width={viewChange ? '100%' : '95%'} gap='.5rem' alignItems={viewChange ? 'center' : 'flex-end'} justifyContent='center' direction={'column'}>
-          <button style={{ border: 'none', height: `${viewChange ? '3.2rem' : '3.7rem'}`, width: `${viewChange ? '90%' : '12rem'}`, backgroundColor: 'var(--secondary-color', color: '#fff', fontSize: 'var(--text-xl)', fontFamily: `${bodyFont}`, fontWeight: '500', cursor: 'pointer' }}>
+          <button style={{ border: 'none', height: `${viewChange ? '3.2rem' : '3.7rem'}`, width: `${viewChange ? '90%' : '12rem'}`, backgroundColor: 'var(--secondary-color', color: '#fff', fontSize: 'var(--text-xl)', fontFamily: bodyFont, fontWeight: 500, cursor: 'pointer' }}>
             Apply
           </button>
 
@@ -63,8 +63,8 @@ const Job_Info_Card = ({ logo, title, company, location, employment, category, v
           </div> */}
 
           <Stack alignItems={viewChange ? 'flex-start' : 'flex-end'} width={viewChange ? '90%' : '100%'}>
-            <Typography fontWeight='600' width='12rem' fontSize='var(--text-base)' fontFamily={`${bodyFont}`} variant='body2' component='p'>
-              1 applied   <Typography color='#acacac' variant='body1' fontSize='var(--text-base)' fontFamily={`${bodyFont}`} component='span'>
+            <Typography fontWeight='600' width='12rem' fontSize='var(--text-base)' fontFamily={bodyFont} variant='body2' component='p'>
+              1 applied   <Typography color='#acacac' variant='body1' fontSize='var(--text-base)' fontFamily={bodyFont} component='span'>
                 of {capacity} vacancies
               </Typography>
             </Typography>

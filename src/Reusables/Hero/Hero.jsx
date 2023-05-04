@@ -13,7 +13,7 @@ const Hero = () => {
             <Stack height='30rem' gap='1rem' width={query ? '50%' : '100%'} direction='column' alignItems={query ? 'flex-start':'center'} justifyContent='center' className='Jobsly_Hero_Details'>
 
                 <Box display='flex' flexDirection='column' width={query ? '70%' : '90%'} alignItems='flex-start'  className='Jobsly_Hero_Details_Text'>
-                    <h1 className='Jobsly_Hero_Details_Header'>Discover more  than<br /> <span className='Jobsly_Hero_Details_Span'>5000+ Jobs</span></h1>
+                    <Typography variant={'h1'} className='Jobsly_Hero_Details_Header' fontFamily={headerFont} fontWeight={600} >Discover more  than<br /> <Typography variant='span' component={'span'} className='Jobsly_Hero_Details_Span'>5000+ Jobs</Typography></Typography>
                     <p>The ideal platform for people seeking to take their careers to new heights</p>
                 </Box>
 
