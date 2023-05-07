@@ -75,14 +75,14 @@ const Job_Filter = ({ setCategoryFilter, categoryFilter ,setEmploymentFilter, em
 
   return (
     <Stack gap='1rem'>
-      <Accordion sx={{ fontFamily: `${bodyFont}`, fontWeight: '600', boxShadow: 'none' }} className='Jobsly_Accordion' >
+      <Accordion sx={{ fontFamily: 'Gilroy-Medium,sans-serif', fontWeight: '600', boxShadow: 'none' }} className='Jobsly_Accordion' >
         <AccordionSummary id='panel1-header' aria-controls='panel1-content' expandIcon={<UilAngleDown />}>Categories</AccordionSummary>
         <AccordionDetails >
           {categories?.data?.map((data) => {
 
             return (
               <FormGroup key={data.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-                <Stack sx={{ fontFamily: `${bodyFont}` }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
+                <Stack sx={{ fontFamily: 'Gilroy-Medium,sans-serif' }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
                   <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data?.attributes?.Category_Name} />} label={[data.attributes.Category_Name, ` (${data.attributes.jobs.data.length})`]} />
                 </Stack>
               </FormGroup>
@@ -91,14 +91,14 @@ const Job_Filter = ({ setCategoryFilter, categoryFilter ,setEmploymentFilter, em
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={{ fontFamily: `${bodyFont}`, fontWeight: '600', boxShadow: 'none' }} className='Jobsly_Accordion' >
+      <Accordion sx={{ fontFamily: 'Gilroy-Medium,sans-serif', fontWeight: '600', boxShadow: 'none' }} className='Jobsly_Accordion' >
         <AccordionSummary id='panel1-header' aria-controls='panel1-content' expandIcon={<UilAngleDown />}>Employment Type</AccordionSummary>
         <AccordionDetails >
           {employments?.data?.map((data) => {
 
             return (
               <FormGroup key={data?.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-                <Stack sx={{ fontFamily: `${bodyFont}` }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
+                <Stack sx={{ fontFamily: 'Gilroy-Medium,sans-serif' }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
                   <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleEmploymentChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data?.attributes?.employment} />} label={[data.attributes.employment, ` (${data.attributes.jobs.data.length})`]} />
                 </Stack>
               </FormGroup>
@@ -109,14 +109,14 @@ const Job_Filter = ({ setCategoryFilter, categoryFilter ,setEmploymentFilter, em
 
 
 
-      <Accordion sx={{ fontFamily: `${bodyFont}`, fontWeight: '600', boxShadow: 'none' }} className='Jobsly_Accordion' >
+      <Accordion sx={{ fontFamily: 'Gilroy-Medium,sans-serif', fontWeight: '600', boxShadow: 'none' }} className='Jobsly_Accordion' >
         <AccordionSummary id='panel1-header' aria-controls='panel1-content' expandIcon={<UilAngleDown />}>Levels</AccordionSummary>
         <AccordionDetails >
           {levels?.data.map((data) => {
 
             return (
               <FormGroup key={data.id} sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-                <Stack sx={{ fontFamily: `${bodyFont}` }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
+                <Stack sx={{ fontFamily: 'Gilroy-Medium,sans-serif' }} width='90%' alignItems='center' justifyContent='flex-start' direction='row' gap='.5rem'>
                   <FormControlLabel className='Job_Filter_Label' sx={{ color: '#a5a5a5' }} control={<Checkbox onChange={handleLevelChange} sx={{ color: '#a5a5a5', '&Mui-checked': { color: 'var(--seconary-color)' } }} value={data?.attributes?.level} />} label={[data.attributes.level, ` (${data.attributes.jobs.data.length})`]} />
                 </Stack>
               </FormGroup>

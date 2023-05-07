@@ -77,7 +77,7 @@ const Footer = () => {
                 {Footer_Links.map((data) => {
                   return (
                     <Stack key={data.heading} width={query ? '40%' : '50%'} height='90%' gap='.6rem'>
-                      <Typography color={'var(--footer-alt-text-color)'} variant="h5" component='h4' fontFamily={bodyFont} fontWeight={500}>
+                      <Typography color={'var(--footer-alt-text-color)'} variant="h5" component='h4' fontFamily={'Gilroy-Medium,sans-serif'} fontWeight={500}>
                         {data.heading}
                       </Typography>
                       {data.links.map((link) => {
@@ -93,7 +93,7 @@ const Footer = () => {
               </Grid>
               <Grid xs={12} container alignItems='center' justifyContent='center' md={5}>
                 <Stack height='90%' width={query ? '90%' : '100%'} gap='1rem'>
-                  <Typography color={'var(--footer-alt-text-color)'} variant='h5' component='h5' fontWeight='500' fontFamily={bodyFont} >
+                  <Typography color={'var(--footer-alt-text-color)'} variant='h5' component='h5' fontWeight='500' fontFamily={'Gilroy-Medium,sans-serif'} >
                     Get job notifications
                   </Typography>
                   <Typography color={'var(--footer-alt-text-color)'} variant='body1' component='p' fontWeight='400' fontFamily={bodyFont} >

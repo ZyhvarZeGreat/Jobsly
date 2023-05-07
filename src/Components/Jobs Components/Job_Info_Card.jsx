@@ -17,7 +17,7 @@ const Job_Info_Card = ({ logo, title, company, location, employment, category, v
             </Box>
           </Stack>
           <Stack width={viewChange ? '100%' : '70%'} height='90%' justifyContent='center' direction='column' gap='.8rem' >
-            <Typography sx={{ width: `100%` }} fontWeight='600' fontFamily={bodyFont} fontSize={viewChange ? 'var(--text-xxl) ' : 'var(--text-xxxl)'} variant='h4' component='h4'>
+            <Typography sx={{ width: `100%` }} fontFamily={'Gilroy-Medium,sans-serif'} fontSize={viewChange ? 'var(--text-xxl) ' : 'var(--text-xxxl)'} variant='h4' component='h4'>
               {title}
             </Typography>
 

@@ -36,7 +36,7 @@ const Home_Featured_Jobs = () => {
           Featured  <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
         </Typography>
       {query &&  <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
-          <Typography fontWeight='600' fontFamily={bodyFont} variant='subtitle1'>
+          <Typography fontWeight='600' fontFamily={'Gilroy-Medium,sans-serif'} variant='subtitle1'>
             Show all jobs
           </Typography>
           <UilArrowRight />
@@ -70,13 +70,13 @@ const Home_Featured_Jobs = () => {
                   </Stack>
 
                   <Stack width='93%' gap='.6rem' alignItems='flex-start' direction='column'>
-                    <Typography fontFamily={bodyFont} fontWeight='500' variant='h5' fontSize='var(--text-xl)' > {Job_Title}</Typography>
+                    <Typography fontFamily={'Gilroy-Medium,sans-serif'} fontWeight='500' variant='h5' fontSize='var(--text-xl)' > {Job_Title}</Typography>
                     <Stack width='100%' direction='row' color='var(--footer-alt-text-color)' alignItems='center' gap='.6rem' justifyContent='flex-start'>
-                      <Typography fontFamily={bodyFont} fontWeight='500' variant='body1' component='p'>
+                      <Typography fontFamily={'Gilroy-Medium,sans-serif'} fontWeight='500' variant='body1' component='p'>
                         {companyName}
                       </Typography>
 
-                      <Typography fontFamily={bodyFont} fontWeight='500' variant='body1' component='p'>
+                      <Typography fontFamily={'Gilroy-Medium,sans-serif'} fontWeight='500' variant='body1' component='p'>
                         {jobLocation}
                       </Typography>
                     </Stack>

@@ -42,7 +42,7 @@ const Home_Latest_Jobs = () => {
                     Latest   <span style={{ color: 'var(--hero-stat-color' }}>Jobs</span>
                 </Typography>
              { query &&   <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
-                    <Typography fontWeight='600' fontFamily={bodyFont} variant='subtitle1'>
+                    <Typography fontWeight='600' fontFamily={'Gilroy-Medium,sans-serif'} variant='subtitle1'>
                         Show all jobs
                     </Typography>
                     <UilArrowRight />
@@ -75,7 +75,7 @@ const Home_Latest_Jobs = () => {
                                             </Stack>
 
                                             <Stack width={query ? '70%':'90%'} height={query ? '85%':'65%'}  justifyContent='center' gap='.4rem' className='Jobsly_Latest_Jobs_Details'>
-                                                <Typography variant='h4' fontSize='var(--text-xxl)' fontFamily={bodyFont} fontWeight='600' component='h4'>{Job_Title}</Typography>
+                                                <Typography variant='h4' fontSize='var(--text-xxl)' fontFamily={'Gilroy-Regular,sans-serif'} fontWeight='600' component='h4'>{Job_Title}</Typography>
                                                 <Stack  alignItems='center' justifyContent='flex-start' gap='.6rem' width='100%' direction='row'>
                                                     <Typography variant='h6' color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontSize={query ? 'var(--text-lg)':'var(--text-base)'} component='p'>{companyName}</Typography>
                                                     <Typography variant='h6' color='var(--footer-alt-text-color)' fontFamily={bodyFont} fontSize={query ? 'var(--text-lg)':'var(--text-base)'}component='p'>{jobLocation}</Typography>
@@ -99,7 +99,7 @@ const Home_Latest_Jobs = () => {
 
             {
                !query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
-                   <Typography fontWeight='600' fontSize={'1.3rem'} fontFamily={bodyFont} variant='subtitle1'>
+                   <Typography fontWeight='600' fontSize={'1.3rem'} fontFamily={'Gilroy-Medium,sans-serif'} variant='subtitle1'>
                        Show all jobs
                    </Typography>
                    <UilArrowRight />
