@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, Skeleton, Stack, Typography } from '@mui/material'
+import { bodyFont,headerFont } from '../../Reusables/constants'
 const Home_Category_Card = ({ catIcon, categoryName, headerFont, bodyFont, jobCount, query, icon }) => {
   console.log(catIcon)
   return (
@@ -13,7 +14,7 @@ const Home_Category_Card = ({ catIcon, categoryName, headerFont, bodyFont, jobCo
         </Stack>
 
         <Stack width='90%' direction='row' alignItems='center' justifyContent='flex-start' gap='2rem'>
-          <Typography fontFamily={`${bodyFont}-Medium`} fontWeight={500}fontSize='1.1rem' variant='subtitle'>
+          <Typography fontFamily={'Gilroy-Medium,sans-serif'} fontWeight={500}fontSize='1.1rem' variant='subtitle'>
             {jobCount} jobs available
           </Typography>
           {icon}

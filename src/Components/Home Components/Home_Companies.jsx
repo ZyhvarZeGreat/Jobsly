@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Stack, useTheme, useMediaQuery, Typography } from "@mui/material";
+import { bodyFont } from "../../Reusables/constants";
 const Home_Companies = () => {
   const theme = useTheme()
   const query = useMediaQuery(theme.breakpoints.up('md'))
@@ -36,7 +37,7 @@ const Home_Companies = () => {
       className="Jobsly_Home_Companies"
     >
       <Stack width='100%' height='4rem' alignItems={query ? 'flex-start':'center'} justifyContent='center' gap='2rem' direction='column' >
-        <Typography fontSize='1.3rem' fontFamily={fontName} fontWeight={500} color='var( --footer-alt-text-color)' variant="subtitle1">
+        <Typography fontSize='1.3rem' fontFamily={'Gilroy-Medium,sans-serif'} fontWeight={500} color='var( --footer-alt-text-color)' variant="subtitle1">
           Companies we've helped grow
         </Typography>
       </Stack>

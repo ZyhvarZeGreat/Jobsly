@@ -3,8 +3,7 @@
 }
 
 .Jobsly_Hero_Details_Header {
-    font-family: 'Clash Display SemiBold', sans-serif;
-    font-size: clamp(3.1rem, 5vw, var(--text-4xl));
+    font-size: clamp(3.2rem, 5vw, var(--text-4xl));
     line-height: clamp(4.3rem, 10vw, 5.5rem);
 }
 
@@ -15,11 +14,11 @@
 .Jobsly_Hero_Details_Text p {
     font-size: clamp(var(--text-xl), 3vw, var(--text-lg));
     color: var(--footer-alt-text-color);
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
 }
 
 .Jobsly_Hero_Details_Search_Form_Container {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
 }
 .Jobsly_Hero_Image img{
     height:100%;

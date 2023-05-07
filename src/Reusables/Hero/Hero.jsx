@@ -13,13 +13,13 @@ const Hero = () => {
             <Stack height='30rem' gap='1rem' width={query ? '50%' : '100%'} direction='column' alignItems={query ? 'flex-start':'center'} justifyContent='center' className='Jobsly_Hero_Details'>
 
                 <Box display='flex' flexDirection='column' width={query ? '70%' : '90%'} alignItems='flex-start'  className='Jobsly_Hero_Details_Text'>
-                    <Typography variant={'h1'} className='Jobsly_Hero_Details_Header' fontFamily={headerFont} fontWeight={600} >Discover more  than<br /> <Typography variant='span' component={'span'} className='Jobsly_Hero_Details_Span'>5000+ Jobs</Typography></Typography>
-                    <p>The ideal platform for people seeking to take their careers to new heights</p>
+                    <h1 style={{fontFamily:headerFont,fontWeight:600}}  className='Jobsly_Hero_Details_Header'>Discover more  than<br /> <span className='Jobsly_Hero_Details_Span'>5000+ Jobs</span></h1>
+                    <p style={{fontFamily:bodyFont,fontWeight:400}} >The ideal platform for people seeking to take their careers to new heights</p>
                 </Box>
 
                 <Box width='100%' className='Jobsly_Hero_Details_Search_Form_Container' display='flex' gap='2rem' flexDirection='column' alignItems={query ? 'flex-start':'center'}  justifyContent='center'>
                     <Search_Form width='60rem' />
-                    <Typography textAlign={ query ? '':'center'} fontFamily={bodyFont} fontSize='1rem' variant='body1' component='p'>Popular: UI Designer,UX Researcher,IOS Developer,Devops</Typography>
+                    <Typography textAlign={ query ? '':'center'} fontFamily={bodyFont} fontWeight={400} fontSize='1rem' variant='body1' component='p'>Popular: UI Designer,UX Researcher,IOS Developer,Devops</Typography>
                 </Box>
             </Stack>
 

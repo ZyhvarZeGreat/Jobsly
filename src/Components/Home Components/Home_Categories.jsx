@@ -41,7 +41,7 @@ const Home_Categories = () => {
         </Typography>
 
         {query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
-          <Typography fontWeight='600' fontFamily={bodyFont} variant='subtitle1'>
+          <Typography fontWeight='600' fontFamily={'Gilroy-Medium,sans-serif'} variant='subtitle1'>
             Show all jobs
           </Typography>
           <UilArrowRight />
@@ -62,7 +62,7 @@ const Home_Categories = () => {
       </Grid>
 
       {  !query && <Link style={{ display: 'flex', color: 'var(--secondary-color)', alignItems: 'center', flexDirection: 'row', gap: '.8rem', justifyContent: 'center' }} to='/Jobs'>
-          <Typography fontWeight='600' fontSize={'1.3rem'} fontFamily={bodyFont} variant='subtitle1'>
+          <Typography fontWeight={600} fontSize={'1.3rem'} fontFamily={'Gilroy-Medium,sans-serif'}  variant='subtitle1'>
             Show all jobs
           </Typography>
           <UilArrowRight />
